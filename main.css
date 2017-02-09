@@ -1,1 +1,7 @@
 #id_button1 {border: 1px solid #ef69ff  }
+
+div {
+    position : fixed; height: 100%; width: 100%;
+    margin: 0% 2% 20px 2%;
+    
+}
