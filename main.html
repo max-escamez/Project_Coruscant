@@ -2,19 +2,51 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>TITLE?</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <script type="text/javascript">
+      function souris(event) {
+
+          // On recupere la position de la souris
+          var x = event.clientX;
+          var y = event.clientY;
+          // On ecrit les coordonnes dans la bulle info
+          document.getElementById('coordonnes').value = x + ', ' + y;
+
+          //On change le style de la bulle pour la rendre visible, positionnee a l'endroit de l'event
+          var element = document.getElementById('info');
+          element.style.display = 'initial';
+          element.style.position = 'absolute';
+          element.style.left = x + 'px';
+          element.style.top = y + 'px';
+      }
+
+      //Fonction pour faire disparaitre la bulle info (on change son style encore)
+      function reset() {
+          var element = document.getElementById('info');
+          element.style.display = 'none';
+      }
+  </script>
+  <title>projectcoruscant</title>
   <script src="script.js"></script>
 </head>
 
-<header>
-    <div title="world map" style="position:fixed; height: 70%; width: 70%; top:0; left: 10%;">
-        <img src="ressources/worldmap.png" style="height: 100%" />
-    </div>
-</header>
+
+
+
 <body>
 
-imagine a world map here
+  <p> <img src="ressources/worldmap.png" alt="" usemap="#map">
+  </p>
+  <map name="map" id="id_button">
+      <!-- Exemple de cercle coord : x,y,R -->
+      <area id="id_button1" shape="circle" border="1" coords="275,108,5" onclick="souris(event);">
+
+      <area shape="circle" border="1" coords="289,154,4" onclick="souris(event);">
+
+  </map>
+
 
 </body>
 
