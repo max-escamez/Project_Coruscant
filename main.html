@@ -41,18 +41,27 @@
 
 <body>
 
-  </p>
 
-  <div class="bouton">
-      <input id="id_texas" type="image" name="image" src="node.png" width="40"/>
-      <input id="id_newyork" type="image" name="image" src="node.png" width="40"/>
+
+
+<div>
+
+  <img src="ressources/worldmap.png" alt=""  usemap="#map" style="height:70%" >
+  <map name="map" id="id_map">
+      <!-- coord : x,y,R -->
+
+      <area shape="circle" id="ireland" border="1" coords="573,180,50" title="ireland" onclick="souris(event);">
+
+  </map>
+
+  <div id="info">
+      <p>coordonnés :
+          <input id="coordonnes" type="text">
+      </p>
   </div>
 
-  <!--<p> <img src="ressources/worldmap.png" alt="" usemap="#map">
-  </p>-->
-  <div>
-      <img src="ressources/worldmap.png" style="height: 70%" alt=""  usemap="#map" >
-  </div>
+</div>
+
 
 </body>
 
