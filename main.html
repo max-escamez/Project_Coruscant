@@ -29,9 +29,11 @@
       }
   </script>
 
+
+
+
   <title>projectcoruscant</title>
 
-  <script src="script.js"></script>
 </head>
 
 <header>
@@ -43,24 +45,44 @@
 
 
 
-
 <div>
 
-  <img src="ressources/worldmap.png" alt=""  usemap="#map" style="height:70%" >
+  <img src="ressources/worldmap.png" alt=""  usemap="#map" width="1241" height="596">
+
   <map name="map" id="id_map">
       <!-- coord : x,y,R -->
+      <area shape="circle" id="ireland" border="1" coords="480,186,4" title="ireland" onclick="souris(event);">
+      <area shape="circle" id="britain" border="1" coords="594,227,4" title="britain"  onclick="souris(event);">
+      <area shape="circle" id="scotland" border="1" coords="544,96,4" title="scotland" onclick="souris(event);">
+      <area shape="circle" id="australia" border="1" coords="1049,473,4" title="australia" onclick="souris(event);">
+      <area shape="circle" id="new_zealand" border="1" coords="1169,550,4" title="new_zealand" onclick="souris(event);">
+      <area shape="circle" id="new_york" border="1" coords="337,243,4" title="new_york" onclick="souris(event);">
+      <area shape="circle" id="boston" border="1" coords="345,235,4" title="boston" onclick="souris(event);">
+      <area shape="circle" id="california" border="1" coords="189,254,4" title="california"  onclick="souris(event);">
+      <area shape="circle" id="georgia" border="1" coords="312,270,4" title="georgia" onclick="souris(event);">
+      <area shape="circle" id="texas" border="1" coords="259,274,4" title="texas" onclick="souris(event);">
+      <area shape="circle" id="canada" border="1" coords="247,182,4" title="canada" onclick="souris(event);">
+      <area shape="circle" id="south_africa" border="1" coords="669,501,4" title="south_africa" onclick="souris(event);">
 
-      <area shape="circle" id="ireland" border="1" coords="573,180,50" title="ireland" onclick="souris(event);">
 
   </map>
 
-  <div id="info">
-      <p>coordonnés :
-          <input id="coordonnes" type="text">
-      </p>
-  </div>
-
 </div>
+
+
+
+<!--JQuery framework hosted by Google-->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+ <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
+ <script>
+ jQuery(document).ready(function(e){
+   $('img[usemap]').rwdImageMaps();
+   $('area').on('click', function() {
+     alert($(this).attr('alt') + ' clicked');
+   });
+});
+</script>
+
 
 
 </body>
