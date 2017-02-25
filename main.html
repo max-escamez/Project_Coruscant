@@ -1,38 +1,39 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
 
-  <script type="text/javascript">
-      function souris(event) {
+    <script type="text/javascript">
+        function souris(event) {
 
-          // On recupere la position de la souris
-          var x = event.clientX;
-          var y = event.clientY;
-          // On ecrit les coordonnes dans la bulle info
-          document.getElementById('coordonnes').value = x + ', ' + y;
+            // On recupere la position de la souris
+            var x = event.clientX;
+            var y = event.clientY;
+            // On ecrit les coordonnes dans la bulle info
+            document.getElementById('coordonnes').value = x + ', ' + y;
 
-          //On change le style de la bulle pour la rendre visible, positionnee a l'endroit de l'event
-          var element = document.getElementById('info');
-          element.style.display = 'initial';
-          element.style.position = 'absolute';
-          element.style.left = x + 'px';
-          element.style.top = y + 'px';
-      }
+            //On change le style de la bulle pour la rendre visible, positionnee a l'endroit de l'event
+            var element = document.getElementById('info');
+            element.style.display = 'initial';
+            element.style.position = 'absolute';
+            element.style.left = x + 'px';
+            element.style.top = y + 'px';
+        }
 
-      //Fonction pour faire disparaitre la bulle info (on change son style encore)
-      function reset() {
-          var element = document.getElementById('info');
-          element.style.display = 'none';
-      }
-  </script>
-
-
+        //Fonction pour faire disparaitre la bulle info (on change son style encore)
+        function reset() {
+            var element = document.getElementById('info');
+            element.style.display = 'none';
+        }
+    </script>
 
 
-  <title>projectcoruscant</title>
+
+
+    <title>projectcoruscant</title>
 
 </head>
 
@@ -45,11 +46,11 @@
 
 
 
-<div>
+    <section>
 
-  <img src="ressources/worldmap.png" alt=""  usemap="#map" width="1241" height="596">
+        <img src="ressources/worldmap.png" alt="" usemap="#map" width="1241" height="596">
 
-  <map name="map" id="id_map">
+        <map name="map" id="id_map">
       <!-- coord : x,y,R -->
       <area shape="circle" id="ireland" border="1" coords="480,186,4" title="ireland" onclick="souris(event);">
       <area shape="circle" id="britain" border="1" coords="594,227,4" title="britain"  onclick="souris(event);">
@@ -67,21 +68,38 @@
 
   </map>
 
-</div>
+    </section>
 
 
 
-<!--JQuery framework hosted by Google-->
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
- <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
- <script>
- jQuery(document).ready(function(e){
-   $('img[usemap]').rwdImageMaps();
-   $('area').on('click', function() {
-     alert($(this).attr('alt') + ' clicked');
-   });
-});
-</script>
+    <!--JQuery framework hosted by Google-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
+    <script>
+        jQuery(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+            $('area').on('click', function() {
+                alert($(this).attr('alt') + ' clicked');
+            });
+        });
+    </script>
+
+
+    <section class="group">
+
+        <section class="id" style="" id="ireland">
+            Ireland
+            <img src="ressources/Ireland/Flag_of_Ireland.png" width="20%" height="20%">
+        </section>
+
+        <section class="data" style="" id="text">
+          here comes the text
+        </section>
+
+
+    </section>
+
 
 
 

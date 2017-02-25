@@ -1,4 +1,6 @@
-
+body {
+  font-family: sans-serif;
+}
 
 div {
     position : fixed; height: 100%; width: 100%;
@@ -11,4 +13,26 @@ div {
   left: 100px;
   right: 100px;
 
+}
+
+section {
+  float: left;
+  margin : 20px 2% 20px 2%
+}
+
+.id {
+  float: left;
+  font-size: 20px;
+  margin: 20px 2% 20px 2%;
+  width: 30%;
+}
+.group {
+  background: #eaeaed;
+  border-radius: 6px;
+  clear: both;
+}
+
+.data {
+  float: right;
+  width: 63%;
 }
