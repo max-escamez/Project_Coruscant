@@ -15,6 +15,10 @@ div {
 
 }
 
+h2 {
+  margin : 10px 1% 10px 1% ;
+}
+
 section {
   float: left;
   margin : 20px 2% 20px 2%
@@ -35,4 +39,10 @@ section {
 .data {
   float: right;
   width: 63%;
+}
+
+.audio {
+  float: left;
+  margin: 20px 2% 20px 2%;
+
 }
