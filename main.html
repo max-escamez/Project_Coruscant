@@ -6,6 +6,9 @@
 
     <link rel="stylesheet" type="text/css" href="main.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+    <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
+
     <script type="text/javascript">
         function souris(event) {
 
@@ -31,6 +34,14 @@
     </script>
 
 
+    <script>
+        jQuery(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+        });
+    </script>
+
+
+
 
 
     <title>projectcoruscant</title>
@@ -43,9 +54,6 @@
 
 
 <body>
-
-
-
     <section>
 
         <img src="ressources/worldmap.png" alt="" usemap="#map" width="1241" height="596">
@@ -64,27 +72,13 @@
       <area shape="circle" id="texas" border="1" coords="259,274,4" title="texas" onclick="souris(event);">
       <area shape="circle" id="canada" border="1" coords="247,182,4" title="canada" onclick="souris(event);">
       <area shape="circle" id="south_africa" border="1" coords="669,501,4" title="south_africa" onclick="souris(event);">
+      <area shape="circle" id="wales" border="1" coords="552,206,4" title="wales" onclick="souris(event);">
+      <area shape="circle" id="northern_ireland" border="1" coords="503,148,4" title="northern_ireland" onclick="souris(event);">
 
 
   </map>
 
     </section>
-
-
-
-    <!--JQuery framework hosted by Google-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-    </script>
-    <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
-    <script>
-        jQuery(document).ready(function(e) {
-            $('img[usemap]').rwdImageMaps();
-            $('area').on('click', function() {
-                alert($(this).attr('alt') + ' clicked');
-            });
-        });
-    </script>
-
 
     <section class="group">
 
@@ -111,11 +105,7 @@
 
 
 
-
 </body>
-
 <footer>
-
 </footer>
-
 </html>
