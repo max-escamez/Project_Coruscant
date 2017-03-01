@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+    <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
+
+    <script type="text/javascript">
+    var cat1 = ($("input[@name=q1]:checked").val() != "d");
+    var cat11 = (!cat1 && !cat2 && !cat3 && !cat4 && !cat5 && !cat6 && !cat7 && !cat8 && !cat9 && !cat10);
+    var categories = [];
+    if (cat1) { categories.push(cat1name) };
+    var catStr = 'You answered the following questions incorrectly: ' + categories.join(', ') + '';
+    $("#categorylist").text(catStr);
+    $("#categorylist").show("slow");
+
+    if (cat1) { $("#category1").show("slow"); };
+    { $("#closing").show("slow"); };
+
+    </script>
+
+</head>
+
+<body>
+
+  <p class="question">1. What is the capital of Australia?</p>
+
+  <ul class="answers">
+  <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Sydney</label><br/>
+  <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Perth</label><br/>
+  <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Melbourne</label><br/>
+  <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Canberra</label><br/>
+  </ul>
+
+  <br/>
+<div id="results">
+Show me the answers!
+</div>  
+
+
+
+
+
+
+</body>
+</html>
