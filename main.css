@@ -2,9 +2,18 @@ body {
   font-family: sans-serif;
 }
 
-div {
-    position : fixed; height: 100%; width: 100%;
-    margin: 0% 2% 20px 2%;
+
+h2 {
+  margin : 10px 1% 10px 1% ;
+}
+
+section {
+
+  margin : 20px 2% 20px 2%
+}
+
+aside {
+  margin : 20px 2% 20px 2%;
 
 }
 
@@ -15,13 +24,23 @@ div {
 
 }
 
-h2 {
-  margin : 10px 1% 10px 1% ;
+.innerhtml {
+
 }
 
-section {
-  float: left;
-  margin : 20px 2% 20px 2%
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  background: #eaeaed;
+  border-radius: 6px;
+
+
 }
 
 .id {
@@ -29,20 +48,17 @@ section {
   font-size: 20px;
   margin: 20px 2% 20px 2%;
   width: 30%;
+
 }
-.group {
-  background: #eaeaed;
-  border-radius: 6px;
-  clear: both;
-}
+
 
 .data {
   float: right;
-  width: 63%;
+  width: 60%;
+
 }
 
 .audio {
   float: left;
   margin: 20px 2% 20px 2%;
-
 }

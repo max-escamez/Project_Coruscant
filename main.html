@@ -6,8 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="main.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
 
     <script type="text/javascript">
@@ -45,43 +44,44 @@
         function load(location) {
             switch (location) {
                 case 'australia':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/Australia/australia.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Australia/australia.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'boston':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/Boston/boston.html" ></object>';
+
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Boston/boston.html" style="width:100%; height:300px;" ></object>';
                     break;
                 case 'california':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/California/california.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/California/california.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'canada':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/Canada/canada.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Canada/canada.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'georgia':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/Georgia/georgia.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Georgia/georgia.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'ireland':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/Ireland/ireland.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Ireland/ireland.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'northern_ireland':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/Ireland/ireland.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Ireland/ireland.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'new_york':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/New_York/new_york.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/New_York/new_york.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'new_zealand':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/New_Zealand/new_zealand.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/New_Zealand/new_zealand.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'scotland':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/Scotland/scotland.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Scotland/scotland.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'south_africa':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/South_Africa/south_africa.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/South_Africa/south_africa.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'texas':
-                    document.getElementById("location").innerHTML = '<object type="text/html" data="ressources/Texas/texas.html" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Texas/texas.html" style="width:100%; height:300px;"></object>';
                     break;
                 case 'wales':
-                    document.getElementById("data").innerHTML = '<object type="text/html" data="ressources/Wales/wales.html ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Wales/wales.html" style="width:100%; height:300px;"></object>';
                     break;
 
                 default:
@@ -113,48 +113,31 @@
 
         <map name="map" id="id_map">
       <!-- coord : x,y,R -->
-      <area shape="circle" id="ireland" border="1" coords="480,186,4" title="ireland" onclick="load('ireland')" href="#data">
-      <area shape="circle" id="britain" border="1" coords="594,227,4" title="britain"  onclick="load('britain')" href="#data">
-      <area shape="circle" id="scotland" border="1" coords="544,96,4" title="scotland" onclick="load('scotland')" href="#data">
-      <area shape="circle" id="australia" border="1" coords="1049,473,4" title="australia" onclick="load('australia')" href="#data">
-      <area shape="circle" id="new_zealand" border="1" coords="1169,550,4" title="new_zealand" onclick="load('new_zealand')" href="#data">
-      <area shape="circle" id="new_york" border="1" coords="337,243,4" title="new_york" onclick="load('new_york')" href="#data">
-      <area shape="circle" id="boston" border="1" coords="345,235,4" title="boston" onclick="load('boston')" href="#data">
-      <area shape="circle" id="california" border="1" coords="189,254,4" title="california"  onclick="load('california')" href="#data">
-      <area shape="circle" id="georgia" border="1" coords="312,270,4" title="georgia" onclick="load('georgia')" href="#data">
-      <area shape="circle" id="texas" border="1" coords="259,274,4" title="texas" onclick="load('texas')" href="#data">
-      <area shape="circle" id="canada" border="1" coords="247,182,4" title="canada" onclick="load('canada')" href="#data">
-      <area shape="circle" id="south_africa" border="1" coords="669,501,4" title="south_africa" onclick="load('south_africa')" href="#data">
-      <area shape="circle" id="wales" border="1" coords="552,206,4" title="wales" onclick="load('wales')" href="#data">
-      <area shape="circle" id="northern_ireland" border="1" coords="503,148,4" title="northern_ireland" onclick="load('northern_ireland')" href="#data">
+      <area shape="circle" id="ireland" border="1" coords="480,186,4" title="ireland" onclick="load('ireland')" href="#innerHTML">
+      <area shape="circle" id="britain" border="1" coords="594,227,4" title="britain"  onclick="load('britain')" href="#innerHTML">
+      <area shape="circle" id="scotland" border="1" coords="544,96,4" title="scotland" onclick="load('scotland')" href="#innerHTML">
+      <area shape="circle" id="australia" border="1" coords="1049,473,4" title="australia" onclick="load('australia')" href="#innerHTML">
+      <area shape="circle" id="new_zealand" border="1" coords="1169,550,4" title="new_zealand" onclick="load('new_zealand')" href="#innerHTML">
+      <area shape="circle" id="new_york" border="1" coords="337,243,4" title="new_york" onclick="load('new_york')" href="#innerHTML">
+      <area shape="circle" id="boston" border="1" coords="345,235,4" title="boston" onclick="load('boston')" href="#innerHTML">
+      <area shape="circle" id="california" border="1" coords="189,254,4" title="california"  onclick="load('california')" href="#innerHTML">
+      <area shape="circle" id="georgia" border="1" coords="312,270,4" title="georgia" onclick="load('georgia')" href="#innerHTML">
+      <area shape="circle" id="texas" border="1" coords="259,274,4" title="texas" onclick="load('texas')" href="#innerHTML">
+      <area shape="circle" id="canada" border="1" coords="247,182,4" title="canada" onclick="load('canada')" href="#innerHTML">
+      <area shape="circle" id="south_africa" border="1" coords="669,501,4" title="south_africa" onclick="load('south_africa')" href="#innerHTML">
+      <area shape="circle" id="wales" border="1" coords="552,206,4" title="wales" onclick="load('wales')" href="#innerHTML">
+      <area shape="circle" id="northern_ireland" border="1" coords="503,148,4" title="northern_ireland" onclick="load('northern_ireland')" href="#innerHTML">
 
 
   </map>
 
     </section>
 
-    <section class="group" id="location">
-        <section class="id" style="">
-            <h2> Ireland </h2>
-            <img src="ressources/Ireland/Flag_of_Ireland.png" width="30%" height="30%">
-            <audio controls>
-              <source src="ressources/Boston/boston.mp3" type="audio/mpeg"/>
-            </audio>
-        </section>
 
-        <div class="audio">
-
-        </div>
+    <div class="innnerhtml" id="innerHTML">
+    </div>
 
 
-
-        <section class="data" style="" id="data">
-
-
-        </section>
-
-
-    </section>
 
 
 
