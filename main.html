@@ -5,7 +5,9 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" type="text/css" href="main.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
 
@@ -102,40 +104,60 @@
 </head>
 
 <header>
-
 </header>
 
 
 <body>
-    <section>
+  <!-- Uses a header that scrolls with the text, rather than staying
+    locked at the top -->
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Project Coruscant</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="main.html">Map</a>
+          <a class="mdl-navigation__link" href="quizz_accent.html">Quizz Accent</a>
+          <a class="mdl-navigation__link" href="quizz_trivia.html">Quizz Trivia</a>
+        </nav>
+      </div>
+    </header>
 
-        <img src="ressources/worldmap.png" alt="" usemap="#map" width="1241" height="596">
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <section>
+            <img src="ressources/worldmap.png" alt="" usemap="#map" width="1241" height="596">
+            <map name="map" id="id_map">
+            <!-- coord : x,y,R -->
+            <area shape="circle" id="ireland" border="1" coords="480,186,4" title="ireland" onclick="load('ireland')" href="#innerHTML">
+            <area shape="circle" id="britain" border="1" coords="594,227,4" title="britain"  onclick="load('britain')" href="#innerHTML">
+            <area shape="circle" id="scotland" border="1" coords="544,96,4" title="scotland" onclick="load('scotland')" href="#innerHTML">
+            <area shape="circle" id="australia" border="1" coords="1049,473,4" title="australia" onclick="load('australia')" href="#innerHTML">
+            <area shape="circle" id="new_zealand" border="1" coords="1169,550,4" title="new_zealand" onclick="load('new_zealand')" href="#innerHTML">
+            <area shape="circle" id="new_york" border="1" coords="337,243,4" title="new_york" onclick="load('new_york')" href="#innerHTML">
+            <area shape="circle" id="boston" border="1" coords="345,235,4" title="boston" onclick="load('boston')" href="#innerHTML">
+            <area shape="circle" id="california" border="1" coords="189,254,4" title="california"  onclick="load('california')" href="#innerHTML">
+            <area shape="circle" id="georgia" border="1" coords="312,270,4" title="georgia" onclick="load('georgia')" href="#innerHTML">
+            <area shape="circle" id="texas" border="1" coords="259,274,4" title="texas" onclick="load('texas')" href="#innerHTML">
+            <area shape="circle" id="canada" border="1" coords="247,182,4" title="canada" onclick="load('canada')" href="#innerHTML">
+            <area shape="circle" id="south_africa" border="1" coords="669,501,4" title="south_africa" onclick="load('south_africa')" href="#innerHTML">
+            <area shape="circle" id="wales" border="1" coords="552,206,4" title="wales" onclick="load('wales')" href="#innerHTML">
+            <area shape="circle" id="northern_ireland" border="1" coords="503,148,4" title="northern_ireland" onclick="load('northern_ireland')" href="#innerHTML">
+                      </map>
+        </section>
+        <div class="innnerhtml" id="innerHTML">
+            <div class="group" id="location">
+                Salut, c'est le projet de qualité supérieur
+            </div>
+        </div>
 
-        <map name="map" id="id_map">
-      <!-- coord : x,y,R -->
-      <area shape="circle" id="ireland" border="1" coords="480,186,4" title="ireland" onclick="load('ireland')" href="#innerHTML">
-      <area shape="circle" id="britain" border="1" coords="594,227,4" title="britain"  onclick="load('britain')" href="#innerHTML">
-      <area shape="circle" id="scotland" border="1" coords="544,96,4" title="scotland" onclick="load('scotland')" href="#innerHTML">
-      <area shape="circle" id="australia" border="1" coords="1049,473,4" title="australia" onclick="load('australia')" href="#innerHTML">
-      <area shape="circle" id="new_zealand" border="1" coords="1169,550,4" title="new_zealand" onclick="load('new_zealand')" href="#innerHTML">
-      <area shape="circle" id="new_york" border="1" coords="337,243,4" title="new_york" onclick="load('new_york')" href="#innerHTML">
-      <area shape="circle" id="boston" border="1" coords="345,235,4" title="boston" onclick="load('boston')" href="#innerHTML">
-      <area shape="circle" id="california" border="1" coords="189,254,4" title="california"  onclick="load('california')" href="#innerHTML">
-      <area shape="circle" id="georgia" border="1" coords="312,270,4" title="georgia" onclick="load('georgia')" href="#innerHTML">
-      <area shape="circle" id="texas" border="1" coords="259,274,4" title="texas" onclick="load('texas')" href="#innerHTML">
-      <area shape="circle" id="canada" border="1" coords="247,182,4" title="canada" onclick="load('canada')" href="#innerHTML">
-      <area shape="circle" id="south_africa" border="1" coords="669,501,4" title="south_africa" onclick="load('south_africa')" href="#innerHTML">
-      <area shape="circle" id="wales" border="1" coords="552,206,4" title="wales" onclick="load('wales')" href="#innerHTML">
-      <area shape="circle" id="northern_ireland" border="1" coords="503,148,4" title="northern_ireland" onclick="load('northern_ireland')" href="#innerHTML">
+      </div>
+    </main>
+  </div>
 
-
-  </map>
-
-    </section>
-
-
-    <div class="innnerhtml" id="innerHTML">
-    </div>
 
 
 

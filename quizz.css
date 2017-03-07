@@ -8,6 +8,11 @@ cursor: pointer;
 }
 
 #results {
+  margin: 10px;
+  background:rgb(96, 125, 139);
+}
+
+/*#results {
 background: #dddada;
 color: 000000;
 padding: 3px;
@@ -25,7 +30,7 @@ text-align: center;
 width: 200px;
 cursor: pointer;
 border: 1px solid gray;
-}
+}*/
 
 #categorylist {
 margin-top: 6px;

@@ -3,152 +3,210 @@
 
 <head>
     <meta charset="utf-8">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" type="text/css" href="quizz.css">
     <script type="text/javascript" src="jquery.js"></script>
 
     <script type="text/javascript">
-    $(document).ready(function(){
-      $("#results").click(function() {
+        $(document).ready(function() {
+            $("#results").click(function() {
 
-        if (!$("input[@name=q1]:checked").val()||
-        !$("input[@name=q2]:checked").val() ||
-        !$("input[@name=q3]:checked").val() ||
-        !$("input[@name=q4]:checked").val() ||
-!       $("input[@name=q5]:checked").val()) {
-        alert("You're not done yet!");
-        }else {
-          var cat1name = "1";
-          var cat2name = "2";
-          var cat3name = "3";
-          var cat4name = "4";
-          var cat5name = "5";
-          var cat11name = "None";
+                if (!$("input[@name=q1]:checked").val() ||
+                    !$("input[@name=q2]:checked").val() ||
+                    !$("input[@name=q3]:checked").val() ||
+                    !$("input[@name=q4]:checked").val() ||
+                    !$("input[@name=q5]:checked").val()) {
+                    alert("You're not done yet!");
+                } else {
+                    var cat1name = "1";
+                    var cat2name = "2";
+                    var cat3name = "3";
+                    var cat4name = "4";
+                    var cat5name = "5";
+                    var cat11name = "None";
 
-          var cat1 = ($("input[@name=q1]:checked").val() != "b");
-          var cat2 = ($("input[@name=q2]:checked").val() != "a");
-          var cat3 = ($("input[@name=q3]:checked").val() != "d");
-          var cat4 = ($("input[@name=q4]:checked").val() != "a");
-          var cat5 = ($("input[@name=q5]:checked").val() != "c");
+                    var cat1 = ($("input[@name=q1]:checked").val() != "b");
+                    var cat2 = ($("input[@name=q2]:checked").val() != "a");
+                    var cat3 = ($("input[@name=q3]:checked").val() != "d");
+                    var cat4 = ($("input[@name=q4]:checked").val() != "a");
+                    var cat5 = ($("input[@name=q5]:checked").val() != "c");
 
-          var cat11 = (!cat1 && !cat2 && !cat3 && !cat4 && !cat5);
-          var categories = [];
+                    var cat11 = (!cat1 && !cat2 && !cat3 && !cat4 && !cat5);
+                    var categories = [];
 
-          if (cat1) { categories.push(cat1name) };
-          if (cat2) { categories.push(cat2name) };
-          if (cat3) { categories.push(cat3name) };
-          if (cat4) { categories.push(cat4name) };
-          if (cat5) { categories.push(cat5name) };
-          if (cat11) { categories.push(cat11name) };
+                    if (cat1) {
+                        categories.push(cat1name)
+                    };
+                    if (cat2) {
+                        categories.push(cat2name)
+                    };
+                    if (cat3) {
+                        categories.push(cat3name)
+                    };
+                    if (cat4) {
+                        categories.push(cat4name)
+                    };
+                    if (cat5) {
+                        categories.push(cat5name)
+                    };
+                    if (cat11) {
+                        categories.push(cat11name)
+                    };
 
-          var catStr = 'You answered the following questions incorrectly: ' + categories.join(', ') + '';
-          $("#categorylist").text(catStr);
-          $("#categorylist").show("slow");
+                    var catStr = 'You answered the following questions incorrectly: ' + categories.join(', ') + '';
+                    $("#categorylist").text(catStr);
+                    $("#categorylist").show("slow");
 
-          if (cat1) { $("#category1").show("slow"); };
-          if (cat2) { $("#category2").show("slow"); };
-          if (cat3) { $("#category3").show("slow"); };
-          if (cat4) { $("#category4").show("slow"); };
-          if (cat5) { $("#category5").show("slow"); };
-          if (cat11) { $("#category11").show("slow"); };
-          { $("#closing").show("slow");
-        };}});});
+                    if (cat1) {
+                        $("#category1").show("slow");
+                    };
+                    if (cat2) {
+                        $("#category2").show("slow");
+                    };
+                    if (cat3) {
+                        $("#category3").show("slow");
+                    };
+                    if (cat4) {
+                        $("#category4").show("slow");
+                    };
+                    if (cat5) {
+                        $("#category5").show("slow");
+                    };
+                    if (cat11) {
+                        $("#category11").show("slow");
+                    }; {
+                        $("#closing").show("slow");
+                    };
+                }
+            });
+        });
     </script>
 
 </head>
 
 <body>
-  <p>Can you recognize where these accents are coming ? </p>
 
-  <p class="question">1. </p>
-  <audio controls>
+    <!-- Uses a header that scrolls with the text, rather than staying
+    locked at the top -->
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Project Coruscant</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="main.html">Map</a>
+                    <a class="mdl-navigation__link" href="quizz_accent.html">Quizz Accent</a>
+                    <a class="mdl-navigation__link" href="quizz_trivia.html">Quizz Trivia</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
+
+                <p>Can you recognize where these accents are coming ? </p>
+
+                <p class="question">1. </p>
+                <audio controls>
     <source src="ressources/Scotland/scotland.mp3"/>
   </audio>
 
-  <ul class="answers">
-  <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Ireland</label><br/>
-  <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Scotland</label><br/>
-  <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">New Zealand</label><br/>
-  <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Wales</label><br/>
-  </ul>
+                <ul class="answers">
+                    <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Ireland</label><br/>
+                    <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Scotland</label><br/>
+                    <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">New Zealand</label><br/>
+                    <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Wales</label><br/>
+                </ul>
 
-  <p class="question">2. </p>
-  <audio controls>
+                <p class="question">2. </p>
+                <audio controls>
     <source src="ressources/South_Africa/southafrica.mp3"/>
   </audio>
 
-  <ul class="answers">
-  <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">South Africa</label><br/>
-  <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">Northern Ireland</label><br/>
-  <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">Scotland</label><br/>
-  <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">Canada</label><br/>
-  </ul>
+                <ul class="answers">
+                    <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">South Africa</label><br/>
+                    <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">Northern Ireland</label><br/>
+                    <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">Scotland</label><br/>
+                    <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">Canada</label><br/>
+                </ul>
 
-  <p class="question">3.</p>
-  <audio controls>
+                <p class="question">3.</p>
+                <audio controls>
     <source src="ressources/Boston/boston.mp3"/>
   </audio>
 
-  <ul class="answers">
-  <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">California</label><br/>
-  <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">Georgia</label><br/>
-  <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">New York</label><br/>
-  <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">Boston</label><br/>
-  </ul>
+                <ul class="answers">
+                    <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">California</label><br/>
+                    <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">Georgia</label><br/>
+                    <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">New York</label><br/>
+                    <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">Boston</label><br/>
+                </ul>
 
-  <p class="question">4.</p>
-  <audio controls>
+                <p class="question">4.</p>
+                <audio controls>
     <source src="ressources/Australia/australia.mp3"/>
   </audio>
 
-  <ul class="answers">
-  <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">Australia</label><br/>
-  <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">New Zealand</label><br/>
-  <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">South Africa</label><br/>
-  <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">Ireland</label><br/>
-  </ul>
+                <ul class="answers">
+                    <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">Australia</label><br/>
+                    <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">New Zealand</label><br/>
+                    <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">South Africa</label><br/>
+                    <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">Ireland</label><br/>
+                </ul>
 
-  <p class="question">5.</p>
-  <audio controls>
+                <p class="question">5.</p>
+                <audio controls>
     <source src="ressources/New_York/newyork.mp3"/>
   </audio>
 
-  <ul class="answers">
-  <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">Boston</label><br/>
-  <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">Georgia</label><br/>
-  <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">New York</label><br/>
-  <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">California</label><br/>
-  </ul>
+                <ul class="answers">
+                    <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">Boston</label><br/>
+                    <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">Georgia</label><br/>
+                    <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">New York</label><br/>
+                    <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">California</label><br/>
+                </ul>
 
-  <br/>
-  <div id="results">
-    Show me the answers!
-  </div>
+                <br/>
 
-  <div id="category1">
-    <p><strong>Question 1:</strong> The correct answer is <strong>Scotland</strong>.</p>
-  </div>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="results">
+                  Show me the answers!
+                </button>
 
-  <div id="category2">
-    <p><strong>Question 2:</strong> The correct answer is <strong>South Africa</strong>.</p>
-  </div>
+                
 
-  <div id="category3">
-    <p><strong>Question 3:</strong> The correct answer is <strong>Boston</strong>.</p>
-  </div>
+                <div id="category1">
+                    <p><strong>Question 1:</strong> The correct answer is <strong>Scotland</strong>.</p>
+                </div>
 
-  <div id="category4">
-    <p><strong>Question 4:</strong> The correct answer is <strong>Australia</strong>.</p>
-  </div>
+                <div id="category2">
+                    <p><strong>Question 2:</strong> The correct answer is <strong>South Africa</strong>.</p>
+                </div>
 
-  <div id="category5">
-    <p><strong>Question 5:</strong> The correct answer is <strong>New York</strong>.</p>
-  </div>
+                <div id="category3">
+                    <p><strong>Question 3:</strong> The correct answer is <strong>Boston</strong>.</p>
+                </div>
 
-  <div id="category11">
-  <p>You answered them all right!</p>
-  </div>
+                <div id="category4">
+                    <p><strong>Question 4:</strong> The correct answer is <strong>Australia</strong>.</p>
+                </div>
 
+                <div id="category5">
+                    <p><strong>Question 5:</strong> The correct answer is <strong>New York</strong>.</p>
+                </div>
+
+                <div id="category11">
+                    <p>You answered them all right!</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
 
 </body>
+
 </html>
