@@ -48,6 +48,8 @@ aside {
 }
 
 .id {
+
+
   float: left;
   font-size: 20px;
   margin: 20px 2% 20px 2%;
@@ -57,9 +59,14 @@ aside {
 
 
 .data {
-  float: right;
-  width: 60%;
 
+  float: left;
+  width: 30%;
+  margin : 20px 2% 20px 2%;
+}
+
+.data2 {
+  margin : 20px 2% 20px 2%;
 }
 
 .audio {
