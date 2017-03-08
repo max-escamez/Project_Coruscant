@@ -2,12 +2,13 @@
 
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 
 h2 {
-  margin : 10px 1% 10px 1% ;
+  margin : 5px 1% 5px 1% ;
 }
 
 section {
