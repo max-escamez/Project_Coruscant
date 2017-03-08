@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -9,7 +10,6 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" type="text/css" href="quizz.css">
     <script type="text/javascript" src="jquery.js"></script>
-
     <script type="text/javascript">
         $(document).ready(function() {
             $("#results").click(function() {
@@ -91,7 +91,7 @@
 
     <!-- Uses a header that scrolls with the text, rather than staying
   locked at the top -->
-    <div class="mdl-layout mdl-js-layout">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
         <header class="mdl-layout__header mdl-layout__header--scroll">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -104,127 +104,382 @@
                     <a class="mdl-navigation__link" href="quizz_accent.html">Quizz Accent</a>
                     <a class="mdl-navigation__link" href="quizz_trivia.html">Quizz Trivia</a>
                 </nav>
+
+
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Easy</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab">Intermediate</a>
+                <a href="#fixed-tab-3" class="mdl-layout__tab">Hard</a>
             </div>
         </header>
 
         <main class="mdl-layout__content">
-            <div class="page-content">
-                <p class="question"><h5>1. Who is America's breadbasket ?</h5></p>
-                <ul class="answers">
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1a">Canada
-                    <input type="radio" id="q1a" class="mdl-radio__button" name="q1" value="a" />
-                  </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1b">Georgia
-                    <input type="radio" id="q1b" class="mdl-radio__button" name="q1" value="b" />
-                  </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1c">The Midwest
-                    <input type="radio" id="q1c" class="mdl-radio__button" name="q1" value="c" />
-                  </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1d">California
-                    <input type="radio" id="q1d" class="mdl-radio__button" name="q1" value="d" />
-                  </label><br/>
+          <section class="mdl-layout__tab-panel" id="fixed-tab-3">
 
-                </ul>
+                        <div class="page-content">
+                            <p class="question"><h5>1. Who is America's breadbasket ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1a3">Canada
+                                <input type="radio" id="q1a3" class="mdl-radio__button" name="q1" value="a" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1b3">Georgia
+                                <input type="radio" id="q1b3" class="mdl-radio__button" name="q1" value="b" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1c3">The Midwest
+                                <input type="radio" id="q1c3" class="mdl-radio__button" name="q1" value="c" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1d3">California
+                                <input type="radio" id="q1d3" class="mdl-radio__button" name="q1" value="d" />
+                              </label><br/>
 
-                <p class="question"><h5>2. Where does the Corgi dog originated from ?</h5></p>
-                <ul class="answers">
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2a">Wales
-                  <input type="radio" id="q2a" class="mdl-radio__button" name="q2" value="a" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2b">Ireland
-                  <input type="radio" id="q2b" class="mdl-radio__button" name="q2" value="b" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2c">Australia
-                  <input type="radio" id="q2c" class="mdl-radio__button" name="q2" value="c" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2d">Canada
-                  <input type="radio" id="q2d" class="mdl-radio__button" name="q2" value="d" />
-                </label><br/>
+                            </ul>
 
-                </ul>
+                            <p class="question"><h5>2. Where does the Corgi dog originated from ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2a3">Wales
+                              <input type="radio" id="q2a3" class="mdl-radio__button" name="q2" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2b3">Ireland
+                              <input type="radio" id="q2b3" class="mdl-radio__button" name="q2" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2c3">Australia
+                              <input type="radio" id="q2c3" class="mdl-radio__button" name="q2" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2d3">Canada
+                              <input type="radio" id="q2d3" class="mdl-radio__button" name="q2" value="d" />
+                            </label><br/>
 
-                <p class="question"><h5>3. Which U.S state is the "Peach State" ?</h5></p>
-                <ul class="answers">
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3a">California
-                  <input type="radio" id="q3a" class="mdl-radio__button" name="q3" value="a" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3b">Texas
-                  <input type="radio" id="q3b" class="mdl-radio__button" name="q3" value="b" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3c">New York
-                  <input type="radio" id="q3c" class="mdl-radio__button" name="q3" value="c" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3d">Georgia
-                  <input type="radio" id="q3d" class="mdl-radio__button" name="q3" value="d" />
-                </label><br/>
+                            </ul>
 
-                </ul>
+                            <p class="question"><h5>3. Which U.S state is the "Peach State" ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3a3">California
+                              <input type="radio" id="q3a3" class="mdl-radio__button" name="q3" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3b3">Texas
+                              <input type="radio" id="q3b3" class="mdl-radio__button" name="q3" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3c3">New York
+                              <input type="radio" id="q3c3" class="mdl-radio__button" name="q3" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3d3">Georgia
+                              <input type="radio" id="q3d3" class="mdl-radio__button" name="q3" value="d" />
+                            </label><br/>
 
-                <p class="question"><h5>4. Which country has the unicorn as its national animal ?</h5></p>
-                <ul class="answers">
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4a">Australia
-                  <input type="radio" id="q4a" class="mdl-radio__button" name="q4" value="a" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4b">Scotland
-                  <input type="radio" id="q4b" class="mdl-radio__button" name="q4" value="b" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4c">New Zealand
-                  <input type="radio" id="q4c" class="mdl-radio__button" name="q4" value="c" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4d">Wales
-                  <input type="radio" id="q4d" class="mdl-radio__button" name="q4" value="d" />
-                </label><br/>
+                            </ul>
 
-                </ul>
+                            <p class="question"><h5>4. Which country has the unicorn as its national animal ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4a3">Australia
+                              <input type="radio" id="q4a3" class="mdl-radio__button" name="q4" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4b3">Scotland
+                              <input type="radio" id="q4b3" class="mdl-radio__button" name="q4" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4c3">New Zealand
+                              <input type="radio" id="q4c3" class="mdl-radio__button" name="q4" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4d3">Wales
+                              <input type="radio" id="q4d3" class="mdl-radio__button" name="q4" value="d" />
+                            </label><br/>
 
-                <p class="question"><h5>5. Which city is known as "The City of Higher Learning" ? </h5></p>
-                <ul class="answers">
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5a">Boston
-                  <input type="radio" id="q5a" class="mdl-radio__button" name="q5" value="a" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5b">New York
-                  <input type="radio" id="q5b" class="mdl-radio__button" name="q5" value="b" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5c">Oxford
-                  <input type="radio" id="q5c" class="mdl-radio__button" name="q5" value="c" />
-                </label><br/>
-                  <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5d">Dublin
-                  <input type="radio" id="q5d" class="mdl-radio__button" name="q5" value="d" />
-                </label><br/>
+                            </ul>
 
-                </ul>
+                            <p class="question"><h5>5. Which city is known as "The City of Higher Learning" ? </h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5a3">Boston
+                              <input type="radio" id="q5a3" class="mdl-radio__button" name="q5" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5b3">New York
+                              <input type="radio" id="q5b3" class="mdl-radio__button" name="q5" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5c3">Oxford
+                              <input type="radio" id="q5c3" class="mdl-radio__button" name="q5" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5d3">Dublin
+                              <input type="radio" id="q5d3" class="mdl-radio__button" name="q5" value="d" />
+                            </label><br/>
 
-                <br/>
+                            </ul>
 
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="results">
-                  Show me the answers!
-                </button>
+                            <br/>
 
-                <div id="category1">
-                    <p><strong>Question 1:</strong> The correct answer is <strong>The Midwest</strong>.</p>
-                </div>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="results">
+                              Show me the answers!
+                            </button>
 
-                <div id="category2">
-                    <p><strong>Question 2:</strong> The correct answer is <strong>Wales</strong>.</p>
-                </div>
+                            <div id="category1">
+                                <p><strong>Question 1:</strong> The correct answer is <strong>The Midwest</strong>.</p>
+                            </div>
 
-                <div id="category3">
-                    <p><strong>Question 3:</strong> The correct answer is <strong>Georgia</strong>.</p>
-                </div>
+                            <div id="category2">
+                                <p><strong>Question 2:</strong> The correct answer is <strong>Wales</strong>.</p>
+                            </div>
 
-                <div id="category4">
-                    <p><strong>Question 4:</strong> The correct answer is <strong>Scotland</strong>.</p>
-                </div>
+                            <div id="category3">
+                                <p><strong>Question 3:</strong> The correct answer is <strong>Georgia</strong>.</p>
+                            </div>
 
-                <div id="category5">
-                    <p><strong>Question 5:</strong> The correct answer is <strong>Boston</strong>.</p>
-                </div>
+                            <div id="category4">
+                                <p><strong>Question 4:</strong> The correct answer is <strong>Scotland</strong>.</p>
+                            </div>
 
-                <div id="category11">
-                    <p>You answered them all right!</p>
-                </div>
+                            <div id="category5">
+                                <p><strong>Question 5:</strong> The correct answer is <strong>Boston</strong>.</p>
+                            </div>
 
-            </div>
+                            <div id="category11">
+                                <p>You answered them all right!</p>
+                            </div>
+
+                        </div>
+          </section>
+
+
+          <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+
+                        <div class="page-content">
+                            <p class="question"><h5>1. SMTG ELSE ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1a1">Canada
+                                <input type="radio" id="q1a1" class="mdl-radio__button" name="q1" value="a" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1b1">Georgia
+                                <input type="radio" id="q1b1" class="mdl-radio__button" name="q1" value="b" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1c1">The Midwest
+                                <input type="radio" id="q1c1" class="mdl-radio__button" name="q1" value="c" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1d1">California
+                                <input type="radio" id="q1d1" class="mdl-radio__button" name="q1" value="d" />
+                              </label><br/>
+
+                            </ul>
+
+                            <p class="question"><h5>2. Where does the Corgi dog originated from ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2a1">Wales
+                              <input type="radio" id="q2a1" class="mdl-radio__button" name="q2" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2b1">Ireland
+                              <input type="radio" id="q2b1" class="mdl-radio__button" name="q2" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2c1">Australia
+                              <input type="radio" id="q2c1" class="mdl-radio__button" name="q2" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2d1">Canada
+                              <input type="radio" id="q2d1" class="mdl-radio__button" name="q2" value="d" />
+                            </label><br/>
+
+                            </ul>
+
+                            <p class="question"><h5>3. Which U.S state is the "Peach State" ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3a1">California
+                              <input type="radio" id="q3a1" class="mdl-radio__button" name="q3" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3b1">Texas
+                              <input type="radio" id="q3b1" class="mdl-radio__button" name="q3" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3c1">New York
+                              <input type="radio" id="q3c1" class="mdl-radio__button" name="q3" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3d1">Georgia
+                              <input type="radio" id="q3d1" class="mdl-radio__button" name="q3" value="d" />
+                            </label><br/>
+
+                            </ul>
+
+                            <p class="question"><h5>4. Which country has the unicorn as its national animal ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4a1">Australia
+                              <input type="radio" id="q4a1" class="mdl-radio__button" name="q4" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4b1">Scotland
+                              <input type="radio" id="q4b1" class="mdl-radio__button" name="q4" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4c1">New Zealand
+                              <input type="radio" id="q4c1" class="mdl-radio__button" name="q4" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4d1">Wales
+                              <input type="radio" id="q4d1" class="mdl-radio__button" name="q4" value="d" />
+                            </label><br/>
+
+                            </ul>
+
+                            <p class="question"><h5>5. Which city is known as "The City of Higher Learning" ? </h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5a1">Boston
+                              <input type="radio" id="q5a1" class="mdl-radio__button" name="q5" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5b1">New York
+                              <input type="radio" id="q5b1" class="mdl-radio__button" name="q5" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5c1">Oxford
+                              <input type="radio" id="q5c1" class="mdl-radio__button" name="q5" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5d1">Dublin
+                              <input type="radio" id="q5d1" class="mdl-radio__button" name="q5" value="d" />
+                            </label><br/>
+
+                            </ul>
+
+                            <br/>
+
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="results">
+                              Show me the answers!
+                            </button>
+
+                            <div id="category1">
+                                <p><strong>Question 1:</strong> The correct answer is <strong>The Midwest</strong>.</p>
+                            </div>
+
+                            <div id="category2">
+                                <p><strong>Question 2:</strong> The correct answer is <strong>Wales</strong>.</p>
+                            </div>
+
+                            <div id="category3">
+                                <p><strong>Question 3:</strong> The correct answer is <strong>Georgia</strong>.</p>
+                            </div>
+
+                            <div id="category4">
+                                <p><strong>Question 4:</strong> The correct answer is <strong>Scotland</strong>.</p>
+                            </div>
+
+                            <div id="category5">
+                                <p><strong>Question 5:</strong> The correct answer is <strong>Boston</strong>.</p>
+                            </div>
+
+                            <div id="category11">
+                                <p>You answered them all right!</p>
+                            </div>
+
+                        </div>
+          </section>
+
+          <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+
+                        <div class="page-content">
+                            <p class="question"><h5>1. Who is America's breadbasket ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1a2">Canada
+                                <input type="radio" id="q1a2" class="mdl-radio__button" name="q1" value="a" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1b2">Georgia
+                                <input type="radio" id="q1b2" class="mdl-radio__button" name="q1" value="b" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1c2">The Midwest
+                                <input type="radio" id="q1c2" class="mdl-radio__button" name="q1" value="c" />
+                              </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1d2">California
+                                <input type="radio" id="q1d2" class="mdl-radio__button" name="q1" value="d" />
+                              </label><br/>
+
+                            </ul>
+
+                            <p class="question"><h5>2. Where does the Corgi dog originated from ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2a2">Wales
+                              <input type="radio" id="q2a2" class="mdl-radio__button" name="q2" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2b2">Ireland
+                              <input type="radio" id="q2b2" class="mdl-radio__button" name="q2" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2c2">Australia
+                              <input type="radio" id="q2c2" class="mdl-radio__button" name="q2" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2d2">Canada
+                              <input type="radio" id="q2d2" class="mdl-radio__button" name="q2" value="d" />
+                            </label><br/>
+
+                            </ul>
+
+                            <p class="question"><h5>3. Which U.S state is the "Peach State" ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3a2">California
+                              <input type="radio" id="q3a2" class="mdl-radio__button" name="q3" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3b2">Texas
+                              <input type="radio" id="q3b2" class="mdl-radio__button" name="q3" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3c2">New York
+                              <input type="radio" id="q3c2" class="mdl-radio__button" name="q3" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3d2">Georgia
+                              <input type="radio" id="q3d2" class="mdl-radio__button" name="q3" value="d" />
+                            </label><br/>
+
+                            </ul>
+
+                            <p class="question"><h5>4. Which country has the unicorn as its national animal ?</h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4a2">Australia
+                              <input type="radio" id="q4a2" class="mdl-radio__button" name="q4" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4b2">Scotland
+                              <input type="radio" id="q4b2" class="mdl-radio__button" name="q4" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4c2">New Zealand
+                              <input type="radio" id="q4c2" class="mdl-radio__button" name="q4" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4d2">Wales
+                              <input type="radio" id="q4d2" class="mdl-radio__button" name="q4" value="d" />
+                            </label><br/>
+
+                            </ul>
+
+                            <p class="question"><h5>5. Which city is known as "The City of Higher Learning" ? </h5></p>
+                            <ul class="answers">
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5a2">Boston
+                              <input type="radio" id="q5a2" class="mdl-radio__button" name="q5" value="a" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5b2">New York
+                              <input type="radio" id="q5b2" class="mdl-radio__button" name="q5" value="b" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5c2">Oxford
+                              <input type="radio" id="q5c2" class="mdl-radio__button" name="q5" value="c" />
+                            </label><br/>
+                              <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5d2">Dublin
+                              <input type="radio" id="q5d2" class="mdl-radio__button" name="q5" value="d" />
+                            </label><br/>
+
+                            </ul>
+
+                            <br/>
+
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="results">
+                              Show me the answers!
+                            </button>
+
+                            <div id="category1">
+                                <p><strong>Question 1:</strong> The correct answer is <strong>The Midwest</strong>.</p>
+                            </div>
+
+                            <div id="category2">
+                                <p><strong>Question 2:</strong> The correct answer is <strong>Wales</strong>.</p>
+                            </div>
+
+                            <div id="category3">
+                                <p><strong>Question 3:</strong> The correct answer is <strong>Georgia</strong>.</p>
+                            </div>
+
+                            <div id="category4">
+                                <p><strong>Question 4:</strong> The correct answer is <strong>Scotland</strong>.</p>
+                            </div>
+
+                            <div id="category5">
+                                <p><strong>Question 5:</strong> The correct answer is <strong>Boston</strong>.</p>
+                            </div>
+
+                            <div id="category11">
+                                <p>You answered them all right!</p>
+                            </div>
+
+                        </div>
+          </section>
+
+
         </main>
     </div>
 
