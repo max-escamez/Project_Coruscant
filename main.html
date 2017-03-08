@@ -85,6 +85,12 @@
                 case 'wales':
                     document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Wales/wales.html" style="width:100%; height:300px;"></object>';
                     break;
+                case 'midwest':
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Midwest/midwest.html" style="width:100%; height:300px;"></object>';
+                    break;
+                case 'britain':
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Britain/britain.html" style="width:100%; height:300px;"></object>';
+                    break;
 
                 default:
                     var path = "main.html"
@@ -146,6 +152,7 @@
             <area shape="circle" id="south_africa" border="1" coords="669,501,4" title="south_africa" onclick="load('south_africa')" href="#innerHTML">
             <area shape="circle" id="wales" border="1" coords="552,206,4" title="wales" onclick="load('wales')" href="#innerHTML">
             <area shape="circle" id="northern_ireland" border="1" coords="503,148,4" title="northern_ireland" onclick="load('northern_ireland')" href="#innerHTML">
+            <area shape="circle" id="midwest" border="1" coords="267,231,4" title="midwest" onclick="load('midwest')" href="#innerHTML">
                       </map>
         </section>
         <div class="innnerhtml" id="innerHTML">
