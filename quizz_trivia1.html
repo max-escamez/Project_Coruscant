@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="quizz.css">
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#results").click(function() {
+
+                if (!$("input[@name=q1]:checked").val() ||
+                    !$("input[@name=q2]:checked").val() ||
+                    !$("input[@name=q3]:checked").val() ||
+                    !$("input[@name=q4]:checked").val() ||
+                    !$("input[@name=q5]:checked").val()) {
+                    alert("You're not done yet!");
+                } else {
+                    var cat1name = "1";
+                    var cat2name = "2";
+                    var cat3name = "3";
+                    var cat4name = "4";
+                    var cat5name = "5";
+                    var cat11name = "None";
+
+
+                    var cat1 = ($("input[@name=q1]:checked").val() != "c");
+                    var cat2 = ($("input[@name=q2]:checked").val() != "d");
+                    var cat3 = ($("input[@name=q3]:checked").val() != "b");
+                    var cat4 = ($("input[@name=q4]:checked").val() != "c");
+                    var cat5 = ($("input[@name=q5]:checked").val() != "b");
+
+                    var cat11 = (!cat1 && !cat2 && !cat3 && !cat4 && !cat5);
+                    var categories = [];
+
+                    if (cat1) {
+                        categories.push(cat1name)
+                    };
+                    if (cat2) {
+                        categories.push(cat2name)
+                    };
+                    if (cat3) {
+                        categories.push(cat3name)
+                    };
+                    if (cat4) {
+                        categories.push(cat4name)
+                    };
+                    if (cat5) {
+                        categories.push(cat5name)
+                    };
+                    if (cat11) {
+                        categories.push(cat11name)
+                    };
+
+                    var catStr = 'You answered the following questions incorrectly: ' + categories.join(', ') + '';
+                    $("#categorylist").text(catStr);
+                    $("#categorylist").show("slow");
+
+                    if (cat1) {
+                        $("#category1").show("slow");
+                    };
+                    if (cat2) {
+                        $("#category2").show("slow");
+                    };
+                    if (cat3) {
+                        $("#category3").show("slow");
+                    };
+                    if (cat4) {
+                        $("#category4").show("slow");
+                    };
+                    if (cat5) {
+                        $("#category5").show("slow");
+                    };
+                    if (cat11) {
+                        $("#category11").show("slow");
+                    }; {
+                        $("#closing").show("slow");
+                    };
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+                                  <div class="page-content">
+                                      <p class="question"><h5>1. How many states are there in the USA ?</h5></p>
+                                      <ul class="answers">
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1a1">30
+                                          <input type="radio" id="q1a1" class="mdl-radio__button" name="q1" value="a" />
+                                        </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1b1">51
+                                          <input type="radio" id="q1b1" class="mdl-radio__button" name="q1" value="b" />
+                                        </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1c1">50
+                                          <input type="radio" id="q1c1" class="mdl-radio__button" name="q1" value="c" />
+                                        </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1d1">60
+                                          <input type="radio" id="q1d1" class="mdl-radio__button" name="q1" value="d" />
+                                        </label><br/>
+
+                                      </ul>
+
+                                      <p class="question"><h5>2. What is the capital of Scotland ?</h5></p>
+                                      <ul class="answers">
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2a1">Cardiff
+                                        <input type="radio" id="q2a1" class="mdl-radio__button" name="q2" value="a" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2b1">Liverpool
+                                        <input type="radio" id="q2b1" class="mdl-radio__button" name="q2" value="b" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2c1">Glasgow
+                                        <input type="radio" id="q2c1" class="mdl-radio__button" name="q2" value="c" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2d1">Edinburgh
+                                        <input type="radio" id="q2d1" class="mdl-radio__button" name="q2" value="d" />
+                                      </label><br/>
+
+                                      </ul>
+
+                                      <p class="question"><h5>3. The city of Memphis is part of which U.S State ?</h5></p>
+                                      <ul class="answers">
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3a1">California
+                                        <input type="radio" id="q3a1" class="mdl-radio__button" name="q3" value="a" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3b1">Tennessee
+                                        <input type="radio" id="q3b1" class="mdl-radio__button" name="q3" value="b" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3c1">North Dakota
+                                        <input type="radio" id="q3c1" class="mdl-radio__button" name="q3" value="c" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q3d1">Washington
+                                        <input type="radio" id="q3d1" class="mdl-radio__button" name="q3" value="d" />
+                                      </label><br/>
+
+                                      </ul>
+
+                                      <p class="question"><h5>4. What is the capital of Australia ?</h5></p>
+                                      <ul class="answers">
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4a1">Sydney
+                                        <input type="radio" id="q4a1" class="mdl-radio__button" name="q4" value="a" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4b1">Perth
+                                        <input type="radio" id="q4b1" class="mdl-radio__button" name="q4" value="b" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4c1">Canberra
+                                        <input type="radio" id="q4c1" class="mdl-radio__button" name="q4" value="c" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q4d1">Melbourne
+                                        <input type="radio" id="q4d1" class="mdl-radio__button" name="q4" value="d" />
+                                      </label><br/>
+
+                                      </ul>
+
+                                      <p class="question"><h5>5. Which city is nicknamed "the Big Apple" ? </h5></p>
+                                      <ul class="answers">
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5a1">Boston
+                                        <input type="radio" id="q5a1" class="mdl-radio__button" name="q5" value="a" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5b1">New York
+                                        <input type="radio" id="q5b1" class="mdl-radio__button" name="q5" value="b" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5c1">Chicago
+                                        <input type="radio" id="q5c1" class="mdl-radio__button" name="q5" value="c" />
+                                      </label><br/>
+                                        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q5d1">San Francisco
+                                        <input type="radio" id="q5d1" class="mdl-radio__button" name="q5" value="d" />
+                                      </label><br/>
+
+                                      </ul>
+
+                                      <br/>
+
+                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="results">
+                                        Show me the answers!
+                                      </button>
+
+                                      <div id="category1">
+                                          <p><strong>Question 1:</strong> The correct answer is <strong>50</strong>.</p>
+                                      </div>
+
+                                      <div id="category2">
+                                          <p><strong>Question 2:</strong> The correct answer is <strong>Edinburgh</strong>.</p>
+                                      </div>
+
+                                      <div id="category3">
+                                          <p><strong>Question 3:</strong> The correct answer is <strong>Tennessee</strong>.</p>
+                                      </div>
+
+                                      <div id="category4">
+                                          <p><strong>Question 4:</strong> The correct answer is <strong>Canberra</strong>.</p>
+                                      </div>
+
+                                      <div id="category5">
+                                          <p><strong>Question 5:</strong> The correct answer is <strong>New York</strong>.</p>
+                                      </div>
+
+                                      <div id="category11">
+                                          <p>You answered them all right!</p>
+                                      </div>
+
+
+
+
+</body>
+
+</html>
