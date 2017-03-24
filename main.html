@@ -10,6 +10,8 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.rwdImageMaps.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 
     <script type="text/javascript">
         function souris(event) {
@@ -45,47 +47,47 @@
         function load(location) {
             switch (location) {
                 case 'australia':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Australia/australia.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Australia/australia.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'boston':
 
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Boston/boston.html" style="width:100%; height:320px;" ></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Boston/boston.html" style="width:100%; height:558px;" ></object>';
                     break;
                 case 'california':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/California/california.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/California/california.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'canada':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Canada/canada.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Canada/canada.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'south':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/South/south.html" style="width:100%; height:400px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/South/south.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'ireland':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Ireland/ireland.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Ireland/ireland.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'northern_ireland':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Northern_Ireland/northern_ireland.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Northern_Ireland/northern_ireland.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'new_york':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/New_York/new_york.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/New_York/new_york.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'new_zealand':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/New_Zealand/new_zealand.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/New_Zealand/new_zealand.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'scotland':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Scotland/scotland.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Scotland/scotland.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'south_africa':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/South_Africa/south_africa.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/South_Africa/south_africa.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'wales':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Wales/wales.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Wales/wales.html" style="width:100%; height:470px;"></object>';
                     break;
                 case 'midwest':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Midwest/midwest.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Midwest/midwest.html" style="width:100%; height:558px;"></object>';
                     break;
                 case 'britain':
-                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Britain/britain.html" style="width:100%; height:320px;"></object>';
+                    document.getElementById("innerHTML").innerHTML = '<object type="text/html" data="ressources/Britain/britain.html" style="width:100%; height:558px;"></object>';
                     break;
 
                 default:
@@ -94,6 +96,21 @@
             }
 
 
+        }
+    </script>
+
+    <script>
+        function animateExit(element, animation) {
+            element = $(element);
+            element.click(
+                function() {
+                    element.addClass('animated ' + slideOutUp);
+                    //wait for animation to finish before removing classes
+                    window.setTimeout(function() {
+                        element.removeClass('animated ' + slideOutUp);
+                    }, 2000);
+
+                });
         }
     </script>
 
@@ -107,39 +124,42 @@
 
 
 <body>
-  <!-- Uses a header that scrolls with the text, rather than staying
+    <!-- Uses a header that scrolls with the text, rather than staying
     locked at the top -->
-  <div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Project Coruscant</span>
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Project Coruscant</span>
 
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation -->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="main.html">Map</a>
-          <a class="mdl-navigation__link" href="quizz_accent.html">Quizz Accent</a>
-          <a class="mdl-navigation__link" href="quizz_trivia.html">Quizz Trivia</a>
-        </nav>
-      </div>
-    </header>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="main.html">Map</a>
+                    <a class="mdl-navigation__link" href="quizz_accent.html">Quizz Accent</a>
+                    <a class="mdl-navigation__link" href="quizz_trivia.html">Quizz Trivia</a>
+                </nav>
+            </div>
+        </header>
 
 
-    <main class="mdl-layout__content">
-      <div class="page-content">
-        <section>
-            <img src="ressources/worldmap.png" alt="" usemap="#map" width="1241" height="596">
-            <map name="map" id="id_map">
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <section>
+                    <img src="ressources/worldmap.png" alt="" usemap="#map" width="1241" height="596">
+                    <map name="map" id="id_map">
             <!-- coord : x,y,R -->
             <area shape="circle" id="ireland" border="1" coords="480,186,4" title="ireland" onclick="load('ireland')" href="#innerHTML">
+            <span for="ireland" class="mdl-tooltip">Ireland</span>
             <area shape="circle" id="britain" border="1" coords="594,227,4" title="britain"  onclick="load('britain')" href="#innerHTML">
             <area shape="circle" id="scotland" border="1" coords="544,96,4" title="scotland" onclick="load('scotland')" href="#innerHTML">
             <area shape="circle" id="australia" border="1" coords="1049,473,4" title="australia" onclick="load('australia')" href="#innerHTML">
             <area shape="circle" id="new_zealand" border="1" coords="1169,550,4" title="new_zealand" onclick="load('new_zealand')" href="#innerHTML">
             <area shape="circle" id="new_york" border="1" coords="337,243,4" title="new_york" onclick="load('new_york')" href="#innerHTML">
             <area shape="circle" id="boston" border="1" coords="345,235,4" title="boston" onclick="load('boston')" href="#innerHTML">
+            <span class="mdl-tooltip" for="boston" style="position:relative; left:120px; top:2px;">Boston</span>
+
             <area shape="circle" id="california" border="1" coords="189,254,4" title="california"  onclick="load('california')" href="#innerHTML">
             <area shape="circle" id="south" border="1" coords="283,262,4" title="south" onclick="load('south')" href="#innerHTML">
             <area shape="circle" id="canada" border="1" coords="247,182,4" title="canada" onclick="load('canada')" href="#innerHTML">
@@ -148,18 +168,17 @@
             <area shape="circle" id="northern_ireland" border="1" coords="503,148,4" title="northern_ireland" onclick="load('northern_ireland')" href="#innerHTML">
             <area shape="circle" id="midwest" border="1" coords="267,231,4" title="midwest" onclick="load('midwest')" href="#innerHTML">
                       </map>
-        </section>
+                </section>
 
 
-        <div class="innnerhtml" id="innerHTML">
-            <div class="group" id="location">
-                Accents are a beautiful thing aren't they ? We aimed to take the most iconic accents of the English language so that people can learn how they sound and some fun facts about the area they come from !
+                <div class="innnerhtml" id="innerHTML">
+                    <section class="group" id="location">
+                    </section>
+                </div>
+
             </div>
-        </div>
-
-      </div>
-    </main>
-  </div>
+        </main>
+    </div>
 
 
 

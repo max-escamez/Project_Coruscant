@@ -3,50 +3,116 @@
 
 <head>
     <meta charset="utf-8">
-
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
+<body class="animated slideInUp">
+  <div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <img class="flag" id="flag" src="newyorkR.png" width="120px" height="120px">
+      <!--<div class="mdl-layout-spacer"></div>-->
+      <!-- Title -->
+      <!--span class="mdl-layout-title">Great Britain</span-->
+      <!-- Add spacer, to align navigation to the right -->
+    </div>
+  </header>
 
-<body>
+  <main class="mdl-layout__content">
+    <div class="page-content">
 
   <div class="group" id="location">
 
         <section class="id" style="">
-            <h2> New York </h2>
+            <h2 class="locationId"> New York </h2>
 
-            <img id="flag" src="flag_new_york.png" width="250px" height="150px">
             <audio controls>
         <source src="newyork.mp3" type="audio/mpeg"/>
       </audio>
+      <ul class="demo-list-two mdl-list">
+          <li class="mdl-list__item mdl-list__item--two-line">
+              <span class="mdl-list__item-primary-content">
+                <span>Motto</span>
+                <span class="mdl-list__item-sub-title">
+                Mottommy Wiseau
+                </span>
+              </span>
+          </li>
+          <li class="mdl-list__item mdl-list__item--two-line">
+              <span class="mdl-list__item-primary-content">
+                <span>Nickname</span>
+                <span class="mdl-list__item-sub-title">
+                  Big Apple
+                </span>
+              </span>
+          </li>
+      </ul>
         </section>
         <section class="data" style="" id="data">
-            <h2> Fun facts : </h2>
-            <p>-New Yorkers bite 10 times more people per year than sharks do</p>
-            <p>-It can cost nearly $300,000 to operate a hot dog stand around Central Park</p>
-            <p>-New Yorkers drink 7 times more coffee than people in the rest of America</p>
-            <p>-The Empire State Building has its own zip code</p>
+            <h4> Fun facts : </h4>
+            <ul class="demo-list-three mdl-list">
+                <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span>Vampires</span>
+                      <span class="mdl-list__item-text-body">
+                        New Yorkers bite 10 times more people per year than sharks do
+                      </span>
+                    </span>
+                </li>
+                <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span>Worth It !</span>
+                      <span class="mdl-list__item-text-body">
+                        It can cost nearly $300,000 to operate a hot dog stand around Central Park
+                      </span>
+                    </span>
+                </li>
+                <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span>A boon for Starbucks</span>
+                      <span class="mdl-list__item-text-body">
+                        New Yorkers drink 7 times more coffee than people in the rest of America
+                      </span>
+                    </span>
+                </li>
+                <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span> One of a kind</span>
+                      <span class="mdl-list__item-text-body">
+                      The Empire State Building has its own zip code
+                      </span>
+                    </span>
+                </li>
+            </ul>
+
         </section>
         <section class="data2" id="data2">
           <center>
-          <h2> Famous people from New York City : </h2>
+          <h4> Famous people from New York City : </h4>
         </center>
         <center>
           <div class="portraitL">
             <center>
                 <B> Anne Hathaway </B>
                 </center>
-                <img id="photo" src="hathaway.png" width="140px" height="200px">
+                <img id="photo" src="hathawayR.png" width="180px" height="180px">
           </div>
           <div class="portraitR">
             <center>
                 <B> Robert de Niro </B>
                 </center>
-                <img id="photo" src="niro.png" width="146px" height="200px">
+                <img id="photo" src="niroR.png" width="180px" height="180px">
           </div>
         </center>
         </section>
         </div>
 
 </body>
+</div>
+</main>
+</div>
 
 </html>

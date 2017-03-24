@@ -3,32 +3,94 @@
 
 <head>
     <meta charset="utf-8">
-
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
+<body class="animated slideInUp">
+  <div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <img class="flag" id="flag" src="newzealandR.png" width="120px" height="120px">
+      <!--<div class="mdl-layout-spacer"></div>-->
+      <!-- Title -->
+      <!--span class="mdl-layout-title">Great Britain</span-->
+      <!-- Add spacer, to align navigation to the right -->
+    </div>
+  </header>
 
-<body>
-
+  <main class="mdl-layout__content">
+    <div class="page-content">
   <div class="group" id="location">
 
         <section class="id" style="">
-            <h2> New Zealand </h2>
-            <img id="flag" src="flag_new_zealand.png" width="250px" height="150px">
+            <h2 class="locationId"> New Zealand </h2>
             <audio controls>
         <source src="newzealand.mp3" type="audio/mpeg"/>
       </audio>
+      <ul class="demo-list-two mdl-list">
+          <li class="mdl-list__item mdl-list__item--two-line">
+              <span class="mdl-list__item-primary-content">
+                <span>Motto</span>
+                <span class="mdl-list__item-sub-title">
+                Mottommy Wiseau
+                </span>
+              </span>
+          </li>
+          <li class="mdl-list__item mdl-list__item--two-line">
+              <span class="mdl-list__item-primary-content">
+                <span>Nickname</span>
+                <span class="mdl-list__item-sub-title">
+                  Big Apple
+                </span>
+              </span>
+          </li>
+      </ul>
         </section>
         <section class="data" style="" id="data">
-            <h2> Fun facts : </h2>
-            <p>-15% of NZ’s population are Māori</p>
-            <p>-There are no nuclear power stations in New Zealand</p>
-            <p>-New Zealand is the only country with the right to put Hobbit-related images on its currency</p>
-            <p>-About one third of the country is protected national park</p>
+            <h4> Fun facts : </h4>
+            <ul class="demo-list-three mdl-list">
+                <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span>Untouched land</span>
+                      <span class="mdl-list__item-text-body">
+                      About one third of the country is protected national park
+                      </span>
+                    </span>
+                </li>
+                <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span>Deep Roots</span>
+                      <span class="mdl-list__item-text-body">
+                        15% of NZ’s population are Māori
+                      </span>
+                    </span>
+                </li>
+                <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span>Clean energy</span>
+                      <span class="mdl-list__item-text-body">
+                        There are no nuclear power stations in New Zealand
+                      </span>
+                    </span>
+                </li>
+                <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span> Country's Pride</span>
+                      <span class="mdl-list__item-text-body">
+                      New Zealand is the only country with the right to put Hobbit-related images on its currency
+                      </span>
+                    </span>
+                </li>
+            </ul>
+
 
         </section>
         <section class="data2" id="data2">
           <center>
-          <h2> Famous people from New Zealand : </h2>
+          <h4> Famous people from New Zealand : </h4>
         </center>
 
         <center>
@@ -36,13 +98,13 @@
             <center>
                 <B> Russel Crowe </B>
                 </center>
-                <img id="photo" src="crowe.png" width="143px" height="200px">
+                <img id="photo" src="croweR.png" width="180px" height="180px">
           </div>
           <div class="portraitR">
             <center>
                 <B> Bilbo Baggins </B>
                 </center>
-                <img id="photo" src="bilbo.png" width="150px" height="200px">
+                <img id="photo" src="bilboR.png" width="180px" height="180px">
           </div>
         </center>
 
@@ -50,5 +112,8 @@
         </div>
 
 </body>
+</div>
+</main>
+</div>
 
 </html>
