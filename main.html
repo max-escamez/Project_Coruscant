@@ -99,20 +99,7 @@
         }
     </script>
 
-    <script>
-        function animateExit(element, animation) {
-            element = $(element);
-            element.click(
-                function() {
-                    element.addClass('animated ' + slideOutUp);
-                    //wait for animation to finish before removing classes
-                    window.setTimeout(function() {
-                        element.removeClass('animated ' + slideOutUp);
-                    }, 2000);
 
-                });
-        }
-    </script>
 
 
 

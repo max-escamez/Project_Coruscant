@@ -1,6 +1,4 @@
 
-
-
 body {
   font-family: 'Roboto', sans-serif;
 
@@ -94,4 +92,27 @@ aside {
 
 .locationId {
   margin-top: 50px;
+}
+
+.vid {
+    width: 550px;
+    height: 310px;
+    object-fit: cover;
+    position: absolute;
+    top: 11%;
+    right: 0px;
+    background-color: black;
+}
+#yt {
+    display: none;
+}
+
+#returnYTbutton{
+  display: none;
+}
+
+#ytbutton{
+  display: none;
+}
+#content {
 }
