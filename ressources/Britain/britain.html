@@ -8,8 +8,52 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <SCRIPT language="javascript">
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <script>
+    $(document).ready(function(){
+
+      $('#ytbutton').hover(
+          function() {
+            $('#photoR').fadeOut('slow');
+            $('#btn').fadeIn('slow');
+            } , function() { $('#btn').fadeOut('slow'); }
+      );
+
+    $("#photoR").click(function () {
+    $("#returnYTbutton").show();
+    $("#content").hide();
+    document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
+    $("#yt")[0].src += "?autoplay=1";
+    $("#yt").show();
+
+
+
+  })
+
+
+      $("#photoL").click(function () {
+      $("#returnYTbutton").show();
+      $("#content").hide();
+      document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
+      $("#yt")[0].src += "?autoplay=1";
+      $("#yt").show();
+
+
+
+    })
+
+  $("#returnYTbutton").click(function () {
+  $("#content").show();
+  document.getElementById("yt").innerHTML = '<object type="text/html" data="" style="width: 550px; height: 310px;" ></object>';
+  $("#yt").hide();
+  $("#returnYTbutton").hide();
+
+
+})
+})
+</script>
+
 </script>
 
 
@@ -52,6 +96,8 @@
 
   <main class="mdl-layout__content">
     <div class="page-content">
+      <div class="vid" id="yt" ></div>
+
 
       <div class="group" id="location">
 
@@ -120,25 +166,28 @@
           </section>
 
           <section class="data2" id="data2">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary" id="returnYTbutton">
+              Return
+            </button>
               <center>
                   <h4> Famous people from Great Britain : </h4>
               </center>
 
               <center>
                   <div class="portraitL">
+                    <center>
+                        <B> Keira Knightley </B>
+                    </center>
+                      <input type="image" id="photoL" src="knightleyR.png" width="180px" height="180px">
 
-                      <img id="photo" src="knightleyR.png" width="180px" height="180px">
-                      <center>
-                          <B> Keira Knightley </B>
-                      </center>
                   </div>
                   <div class="portraitR">
+                    <center>
+                        <B> Colin Firth </B>
+                    </center>
+                      <input type="image" id="photoR" src="colinfirthR.png" width="180px" height="180px">
 
-                      <img id="photo" src="colinfirthR.png" width="180px" height="180px">
-                      <center>
-                          <B> Colin Firth </B>
-                          <div id="ytplayer"></div>
-                      </center>
+
                   </div>
               </center>
 

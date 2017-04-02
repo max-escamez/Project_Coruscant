@@ -8,51 +8,43 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <script>
-    // Fires whenever a player has finished loading
-function onPlayerReady(event) {
-    event.target.playVideo();
-}
+    $(document).ready(function(){
 
-// Fires when the player's state changes.
-function onPlayerStateChange(event) {
-    // Go to the next video after the current one is finished playing
-    if (event.data === 0) {
-        $.fancybox.next();
-    }
-}
+      $('#ytbutton').hover(
+          function() {
+            $('#photoR').fadeOut('slow');
+            $('#btn').fadeIn('slow');
+            } , function() { $('#btn').fadeOut('slow'); }
+      );
 
-// The API will call this function when the page has finished downloading the JavaScript for the player API
-function onYouTubePlayerAPIReady() {
+    $("#photoR").click(function () {
+    $("#returnYTbutton").show();
+    $("#content").hide();
+    document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
+    $("#yt")[0].src += "?autoplay=1";
+    $("#yt").show();
+  })
+  $("#photoL").click(function () {
+  $("#returnYTbutton").show();
+  $("#content").hide();
+  document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
+  $("#yt")[0].src += "?autoplay=1";
+  $("#yt").show();
+})
 
-    // Initialise the fancyBox after the DOM is loaded
-    $(document).ready(function() {
-        $(".fancybox")
-            .attr('rel', 'gallery')
-            .fancybox({
-                openEffect  : 'none',
-                closeEffect : 'none',
-                nextEffect  : 'none',
-                prevEffect  : 'none',
-                padding     : 0,
-                margin      : 50,
-                beforeShow  : function() {
-                    // Find the iframe ID
-                    var id = $.fancybox.inner.find('iframe').attr('id');
+  $("#returnYTbutton").click(function () {
+  $("#content").show();
+  document.getElementById("yt").innerHTML = '<object type="text/html" data="" style="width: 550px; height: 310px;" ></object>';
+  $("#yt").hide();
+  $("#returnYTbutton").hide();
 
-                    // Create video player object and add event listeners
-                    var player = new YT.Player(id, {
-                        events: {
-                            'onReady': onPlayerReady,
-                            'onStateChange': onPlayerStateChange
-                        }
-                    });
-                }
-            });
-    });
 
-}</script>
-
+})
+})
+</script>
 
 
 
@@ -72,6 +64,8 @@ function onYouTubePlayerAPIReady() {
 
         <main class="mdl-layout__content">
             <div class="page-content">
+              <div class="vid" id="yt" ></div>
+
                 <div class="group" id="location">
 
                     <section class="id" style="">
@@ -137,6 +131,9 @@ function onYouTubePlayerAPIReady() {
 
                     </section>
                     <section class="data2" id="data2">
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary" id="returnYTbutton">
+                        Return
+                      </button>
                         <center>
                             <h4> Famous people from the South : </h4>
                         </center>
@@ -145,15 +142,14 @@ function onYouTubePlayerAPIReady() {
                                 <center>
                                     <B> Reese Whitherspoon </B>
                                 </center>
-                                <img id="photo" src="witherspoonR.png" width="180px" height="180px">
-                                <a class="popup" href="#!" data-link="" data-title="Reese">Reese</a>
+                                <input type="image" id="photoL" src="witherspoonR.png" width="180px" height="180px">
                             </div>
                             <div class="portraitR">
                                 <center>
                                     <B> Matthew McConaughey </B>
                                 </center>
-                                <img id="photo" src="mcconaugheyR.png" width="180px" height="180px">
-                                <a class="fancybox fancybox.iframe" href="https://www.youtube.com/watch?v=O0BduqxmEqA">Video #1</a>
+                                <input type="image" id="photoR" src="mcconaugheyR.png" width="180px" height="180px">
+
 
                             </div>
                         </center>

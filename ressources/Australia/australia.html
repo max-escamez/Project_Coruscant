@@ -27,10 +27,17 @@
     $("#photoR").click(function () {
     $("#returnYTbutton").show();
     $("#content").hide();
-    document.getElementById("yt").innerHTML = '<object type="text/html" data="player.html" style="width: 550px; height: 310px;" ></object>';
+    document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
     $("#yt")[0].src += "?autoplay=1";
     $("#yt").show();
   })
+  $("#photoL").click(function () {
+  $("#returnYTbutton").show();
+  $("#content").hide();
+  document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
+  $("#yt")[0].src += "?autoplay=1";
+  $("#yt").show();
+})
 
   $("#returnYTbutton").click(function () {
   $("#content").show();
@@ -147,7 +154,7 @@
                                 <center>
                                     <B> Cate Blanchett </B>
                                 </center>
-                                <img id="photoL" src="blanchettR.png" width="180px" height="180px">
+                                <input type="image" id="photoL" src="blanchettR.png" width="180px" height="180px">
                             </div>
                             <div class="portraitR">
                                 <center>
