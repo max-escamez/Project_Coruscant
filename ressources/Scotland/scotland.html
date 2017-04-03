@@ -11,40 +11,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <script>
-    $(document).ready(function(){
+        $(document).ready(function() {
 
-      $('#ytbutton').hover(
-          function() {
-            $('#photoR').fadeOut('slow');
-            $('#btn').fadeIn('slow');
-            } , function() { $('#btn').fadeOut('slow'); }
-      );
+            $("#photoR").click(function() {
+                $("#people").hide();
 
-    $("#photoR").click(function () {
-    $("#returnYTbutton").show();
-    $("#content").hide();
-    document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
-    $("#yt")[0].src += "?autoplay=1";
-    $("#yt").show();
-  })
-  $("#photoL").click(function () {
-  $("#returnYTbutton").show();
-  $("#content").hide();
-  document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
-  $("#yt")[0].src += "?autoplay=1";
-  $("#yt").show();
-})
+                $("#returnYTbutton").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
+                $("#yt")[0].src += "?autoplay=1";
+                $("#yt").show();
+            })
+            $("#photoL").click(function() {
+                $("#people").hide();
 
-  $("#returnYTbutton").click(function () {
-  $("#content").show();
-  document.getElementById("yt").innerHTML = '<object type="text/html" data="" style="width: 550px; height: 310px;" ></object>';
-  $("#yt").hide();
-  $("#returnYTbutton").hide();
+                $("#returnYTbutton").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
+                $("#yt")[0].src += "?autoplay=1";
+                $("#yt").show();
+            })
+
+            $("#returnYTbutton").click(function() {
+                $("#people").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="" style="width: 550px; height: 310px;" ></object>';
+                $("#yt").hide();
+                $("#returnYTbutton").hide();
 
 
-})
-})
-</script>
+            })
+        })
+    </script>
 
 </head>
 
@@ -132,6 +127,7 @@
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary" id="returnYTbutton">
             Return
           </button>
+          <div id="people">
           <center>
           <h4> Famous people from Scotland : </h4>
         </center>
@@ -149,6 +145,7 @@
                     <input type="image" id="photoR" src="mcgregorR.png" width="180px" height="180px">
               </div>
             </center>
+          </div>
         </section>
         </div>
 

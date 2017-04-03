@@ -9,52 +9,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
-    $(document).ready(function(){
+        $(document).ready(function() {
 
-      $('#ytbutton').hover(
-          function() {
-            $('#photoR').fadeOut('slow');
-            $('#btn').fadeIn('slow');
-            } , function() { $('#btn').fadeOut('slow'); }
-      );
+            $("#photoR").click(function() {
+                $("#people").hide();
 
-    $("#photoR").click(function () {
-    $("#returnYTbutton").show();
-    $("#content").hide();
-    document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
-    $("#yt")[0].src += "?autoplay=1";
-    $("#yt").show();
+                $("#returnYTbutton").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
+                $("#yt")[0].src += "?autoplay=1";
+                $("#yt").show();
+            })
+            $("#photoL").click(function() {
+                $("#people").hide();
 
+                $("#returnYTbutton").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
+                $("#yt")[0].src += "?autoplay=1";
+                $("#yt").show();
+            })
 
-
-  })
-
-
-      $("#photoL").click(function () {
-      $("#returnYTbutton").show();
-      $("#content").hide();
-      document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
-      $("#yt")[0].src += "?autoplay=1";
-      $("#yt").show();
+            $("#returnYTbutton").click(function() {
+                $("#people").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="" style="width: 550px; height: 310px;" ></object>';
+                $("#yt").hide();
+                $("#returnYTbutton").hide();
 
 
+            })
+        })
+    </script>
 
-    })
-
-  $("#returnYTbutton").click(function () {
-  $("#content").show();
-  document.getElementById("yt").innerHTML = '<object type="text/html" data="" style="width: 550px; height: 310px;" ></object>';
-  $("#yt").hide();
-  $("#returnYTbutton").hide();
-
-
-})
-})
-</script>
-
-</script>
+    </script>
 
 
     <script>
@@ -67,6 +54,7 @@
         // Replace the 'ytplayer' element with an <iframe> and
         // YouTube player after the API code downloads.
         var player;
+
         function onYouTubePlayerAPIReady() {
             player = new YT.Player('ytplayer', {
                 height: '360',
@@ -83,122 +71,124 @@
 </head>
 
 <body class="animated slideInUp">
-  <div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--scroll">
-    <div class="mdl-layout__header-row">
-      <img class="flag" id="flag" src="flag.png" width="120px" height="120px">
-      <!--<div class="mdl-layout-spacer"></div>-->
-      <!-- Title -->
-      <!--span class="mdl-layout-title">Great Britain</span-->
-      <!-- Add spacer, to align navigation to the right -->
-    </div>
-  </header>
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
+                <img class="flag" id="flag" src="flag.png" width="120px" height="120px">
+                <!--<div class="mdl-layout-spacer"></div>-->
+                <!-- Title -->
+                <!--span class="mdl-layout-title">Great Britain</span-->
+                <!-- Add spacer, to align navigation to the right -->
+            </div>
+        </header>
 
-  <main class="mdl-layout__content">
-    <div class="page-content">
-      <div class="vid" id="yt" ></div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="vid" id="yt"></div>
 
 
-      <div class="group" id="location">
+                <div class="group" id="location">
 
-          <section class="id" style="">
+                    <section class="id" style="">
 
-              <h2 class="locationId"> Great Britain </h2>
-              <audio controls>
+                        <h2 class="locationId"> Great Britain </h2>
+                        <audio controls>
           <source src="britain.mp3" type="audio/mpeg"/>
         </audio>
-        <ul class="demo-list-two mdl-list">
-            <li class="mdl-list__item mdl-list__item--two-line">
-                <span class="mdl-list__item-primary-content">
+                        <ul class="demo-list-two mdl-list">
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
                   <span>Motto</span>
-                  <span class="mdl-list__item-sub-title">
+                                <span class="mdl-list__item-sub-title">
                   <i>Dieu et mon droit</i>
                   </span>
-                </span>
-            </li>
-            <li class="mdl-list__item mdl-list__item--two-line">
-                <span class="mdl-list__item-primary-content">
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
                   <span>Nickname</span>
-                  <span class="mdl-list__item-sub-title">
+                                <span class="mdl-list__item-sub-title">
                     Land of Hope and Glory
                   </span>
-                </span>
-            </li>
-        </ul>
-          </section>
+                                </span>
+                            </li>
+                        </ul>
+                    </section>
 
-          <section class="data" style="" id="data">
-              <h4> Fun facts : </h4>
-              <ul class="demo-list-three mdl-list">
-                  <li class="mdl-list__item mdl-list__item--three-line">
-                      <span class="mdl-list__item-primary-content">
+                    <section class="data" style="" id="data">
+                        <h4> Fun facts : </h4>
+                        <ul class="demo-list-three mdl-list">
+                            <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
                         <span>Powerhouse</span>
-                        <span class="mdl-list__item-text-body">
+                                <span class="mdl-list__item-text-body">
                         The Queen of the UK is the legal owner of one-sixth of the Earth's land surface
                         </span>
-                      </span>
-                  </li>
-                  <li class="mdl-list__item mdl-list__item--three-line">
-                      <span class="mdl-list__item-primary-content">
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
                         <span>Harder for Us</span>
-                        <span class="mdl-list__item-text-body">
+                                <span class="mdl-list__item-text-body">
                           In the UK, accents change noticeably about every 25 miles (40km)
                         </span>
-                      </span>
-                  </li>
-                  <li class="mdl-list__item mdl-list__item--three-line">
-                      <span class="mdl-list__item-primary-content">
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
                         <span>Same Old Strife </span>
-                        <span class="mdl-list__item-text-body">
+                                <span class="mdl-list__item-text-body">
                           U.S. eggs are illegal in Britain because they are washed. British eggs are illegal in the U.S. because they are not.
                         </span>
-                      </span>
-                  </li>
-                  <li class="mdl-list__item mdl-list__item--three-line">
-                      <span class="mdl-list__item-primary-content">
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
                         <span>Queen of Steel</span>
-                        <span class="mdl-list__item-text-body">
+                                <span class="mdl-list__item-text-body">
                           Queen Victoria survived at least 7 assassination attempts.
                         </span>
-                      </span>
-                  </li>
-              </ul>
-          </section>
+                                </span>
+                            </li>
+                        </ul>
+                    </section>
 
-          <section class="data2" id="data2">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary" id="returnYTbutton">
-              Return
-            </button>
-              <center>
-                  <h4> Famous people from Great Britain : </h4>
-              </center>
+                    <section class="data2" id="data2">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary" id="returnYTbutton">
+                          Return
+                        </button>
+                        <div id="people">
+                            <center>
+                                <h4> Famous people from Great Britain : </h4>
+                            </center>
 
-              <center>
-                  <div class="portraitL">
-                    <center>
-                        <B> Keira Knightley </B>
-                    </center>
-                      <input type="image" id="photoL" src="knightleyR.png" width="180px" height="180px">
+                            <center>
+                                <div class="portraitL">
+                                    <center>
+                                        <B> Keira Knightley </B>
+                                    </center>
+                                    <input type="image" id="photoL" src="knightleyR.png" width="180px" height="180px">
 
-                  </div>
-                  <div class="portraitR">
-                    <center>
-                        <B> Colin Firth </B>
-                    </center>
-                      <input type="image" id="photoR" src="colinfirthR.png" width="180px" height="180px">
-
-
-                  </div>
-              </center>
-
-          </section>
-      </div>
+                                </div>
+                                <div class="portraitR">
+                                    <center>
+                                        <B> Colin Firth </B>
+                                    </center>
+                                    <input type="image" id="photoR" src="colinfirthR.png" width="180px" height="180px">
 
 
+                                </div>
+                            </center>
+                        </div>
 
+                    </section>
+                </div>
+
+
+
+            </div>
+        </main>
     </div>
-  </main>
-</div>
 
 
 

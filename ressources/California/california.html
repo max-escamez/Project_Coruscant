@@ -9,150 +9,148 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
-    $(document).ready(function(){
+        $(document).ready(function() {
 
-      $('#ytbutton').hover(
-          function() {
-            $('#photoR').fadeOut('slow');
-            $('#btn').fadeIn('slow');
-            } , function() { $('#btn').fadeOut('slow'); }
-      );
+            $("#photoR").click(function() {
+                $("#people").hide();
 
-    $("#photoR").click(function () {
-    $("#returnYTbutton").show();
-    $("#content").hide();
-    document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
-    $("#yt")[0].src += "?autoplay=1";
-    $("#yt").show();
-  })
-  $("#photoL").click(function () {
-  $("#returnYTbutton").show();
-  $("#content").hide();
-  document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
-  $("#yt")[0].src += "?autoplay=1";
-  $("#yt").show();
-})
+                $("#returnYTbutton").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="playerR.html" style="width: 550px; height: 310px;" ></object>';
+                $("#yt")[0].src += "?autoplay=1";
+                $("#yt").show();
+            })
+            $("#photoL").click(function() {
+                $("#people").hide();
 
-  $("#returnYTbutton").click(function () {
-  $("#content").show();
-  document.getElementById("yt").innerHTML = '<object type="text/html" data="" style="width: 550px; height: 310px;" ></object>';
-  $("#yt").hide();
-  $("#returnYTbutton").hide();
+                $("#returnYTbutton").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="playerL.html" style="width: 550px; height: 310px;" ></object>';
+                $("#yt")[0].src += "?autoplay=1";
+                $("#yt").show();
+            })
+
+            $("#returnYTbutton").click(function() {
+                $("#people").show();
+                document.getElementById("yt").innerHTML = '<object type="text/html" data="" style="width: 550px; height: 310px;" ></object>';
+                $("#yt").hide();
+                $("#returnYTbutton").hide();
 
 
-})
-})
-</script>
+            })
+        })
+    </script>
 
 </head>
 
 <body class="animated slideInUp">
-  <div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--scroll">
-    <div class="mdl-layout__header-row">
-      <img class="flag" id="flag" src="californiaR.png" width="120px" height="120px">
-      <!--<div class="mdl-layout-spacer"></div>-->
-      <!-- Title -->
-      <!--span class="mdl-layout-title">Great Britain</span-->
-      <!-- Add spacer, to align navigation to the right -->
-    </div>
-  </header>
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
+                <img class="flag" id="flag" src="californiaR.png" width="120px" height="120px">
+                <!--<div class="mdl-layout-spacer"></div>-->
+                <!-- Title -->
+                <!--span class="mdl-layout-title">Great Britain</span-->
+                <!-- Add spacer, to align navigation to the right -->
+            </div>
+        </header>
 
-  <main class="mdl-layout__content">
-    <div class="page-content">
-      <div class="vid" id="yt" ></div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="vid" id="yt"></div>
 
 
-  <div class="group" id="location">
+                <div class="group" id="location">
 
-        <section class="id" style="">
-            <h2 class="locationId"> California </h2>
-            <audio controls>
+                    <section class="id" style="">
+                        <h2 class="locationId"> California </h2>
+                        <audio controls>
         <source src="california.mp3" type="audio/mpeg"/>
       </audio>
-      <ul class="demo-list-two mdl-list">
-          <li class="mdl-list__item mdl-list__item--two-line">
-              <span class="mdl-list__item-primary-content">
+                        <ul class="demo-list-two mdl-list">
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
                 <span>Motto</span>
-                <span class="mdl-list__item-sub-title">
+                                <span class="mdl-list__item-sub-title">
                 <i>Eureka!</i>
                 </span>
-              </span>
-          </li>
-          <li class="mdl-list__item mdl-list__item--two-line">
-              <span class="mdl-list__item-primary-content">
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line">
+                                <span class="mdl-list__item-primary-content">
                 <span>Nickname</span>
-                <span class="mdl-list__item-sub-title">
+                                <span class="mdl-list__item-sub-title">
                   The Golden State
                 </span>
-              </span>
-          </li>
-      </ul>
-        </section>
-        <section class="data" style="" id="data">
-            <h4> Fun facts : </h4>
+                                </span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="data" style="" id="data">
+                        <h4> Fun facts : </h4>
 
-            <ul class="demo-list-three mdl-list">
-                <li class="mdl-list__item mdl-list__item--three-line">
-                    <span class="mdl-list__item-primary-content">
+                        <ul class="demo-list-three mdl-list">
+                            <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
                       <span>Crowded State</span>
-                      <span class="mdl-list__item-text-body">
+                                <span class="mdl-list__item-text-body">
                       One out of every eight United States residents lives in California
                       </span>
-                    </span>
-                </li>
-                <li class="mdl-list__item mdl-list__item--three-line">
-                    <span class="mdl-list__item-primary-content">
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
                       <span>Movieland</span>
-                      <span class="mdl-list__item-text-body">
+                                <span class="mdl-list__item-text-body">
                         The first motion picture theater opened in Los Angeles on April 2, 1902
                       </span>
-                    </span>
-                </li>
-                <li class="mdl-list__item mdl-list__item--three-line">
-                    <span class="mdl-list__item-primary-content">
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
                       <span>The King of All Trees</span>
-                      <span class="mdl-list__item-text-body">
+                                <span class="mdl-list__item-text-body">
                         Sequoia National Park contains the largest living tree. It's named Hyperion and its trunk is 102 feet in circumference
                       </span>
-                    </span>
-                </li>
-                <li class="mdl-list__item mdl-list__item--three-line">
-                    <span class="mdl-list__item-primary-content">
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
                       <span> Still on the Flag</span>
-                      <span class="mdl-list__item-text-body">
+                                <span class="mdl-list__item-text-body">
                       California was originally known as the Grizzly Bear State. As the bear population was wiped out it became the Golden State
                       </span>
-                    </span>
-                </li>
-            </ul>
+                                </span>
+                            </li>
+                        </ul>
 
-        </section>
-        <section class="data2" id="data2">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary" id="returnYTbutton">
-            Return
-          </button>
-          <center>
-          <h4> Famous people from California : </h4>
-        </center>
-        <center>
-          <div class="portraitL">
-            <center>
-                <B> Jessica Chastain </B>
-                </center>
-                <input type="image" id="photoL" src="chastainR.png" width="180px" height="180px">
-          </div>
-          <div class="portraitR">
-            <center>
-                <B> Jake Gyllenhaal </B>
-                </center>
-                <input type="image" id="photoR" src="jakeR.png" width="180px" height="180px">
-          </div>
-        </center>
-        </section>
-        </div>
+                    </section>
+                    <section class="data2" id="data2">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary" id="returnYTbutton">
+                          Return
+                        </button>
+                        <div id="people">
+                            <center>
+                                <h4> Famous people from California : </h4>
+                            </center>
+                            <center>
+                                <div class="portraitL">
+                                    <center>
+                                        <B> Jessica Chastain </B>
+                                    </center>
+                                    <input type="image" id="photoL" src="chastainR.png" width="180px" height="180px">
+                                </div>
+                                <div class="portraitR">
+                                    <center>
+                                        <B> Jake Gyllenhaal </B>
+                                    </center>
+                                    <input type="image" id="photoR" src="jakeR.png" width="180px" height="180px">
+                                </div>
+                            </center>
+                        </div>
+
+                    </section>
+                </div>
 
 </body>
 </div>
