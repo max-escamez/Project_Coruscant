@@ -57,29 +57,12 @@
                     };
 
                     var catStr = 'You answered the following questions incorrectly: ' + categories.join(', ') + '';
-                    $("#categorylist").text(catStr);
-                    $("#categorylist").show("slow");
 
-                    if (cat1) {
-                        $("#category1").show("slow");
-                    };
-                    if (cat2) {
-                        $("#category2").show("slow");
-                    };
-                    if (cat3) {
-                        $("#category3").show("slow");
-                    };
-                    if (cat4) {
-                        $("#category4").show("slow");
-                    };
-                    if (cat5) {
-                        $("#category5").show("slow");
-                    };
-                    if (cat11) {
-                        $("#category11").show("slow");
-                    }; {
-                        $("#closing").show("slow");
-                    };
+                    if(categories!="None"){
+                      alert('You answered the following question(s) incorrectly: ' + categories.join(', ') + '');
+                    }else{
+                      alert('Congratulations ! You answered them all right!');
+                    }
                 }
             });
         });
@@ -206,32 +189,6 @@
                 </button>
 
 
-
-                <div class="categories" id="categories">
-                <div id="category1">
-                    <p><strong>Question 1 is wrong</strong></p>
-                </div>
-
-                <div id="category2">
-                    <p><strong>Question 2 is wrong</strong></p>
-                </div>
-
-                <div id="category3">
-                    <p><strong>Question 3 is wrong</strong></p>
-                </div>
-
-                <div id="category4">
-                    <p><strong>Question 4 is wrong</strong></p>
-                </div>
-
-                <div id="category5">
-                    <p><strong>Question 5 is wrong</strong></p>
-                </div>
-
-                <div id="category11">
-                    <p>You answered them all right!</p>
-                </div>
-              </div>
 
 
 
