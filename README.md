@@ -1,4 +1,4 @@
-# Project_Coruscant
+# Project Coruscant
 ## Our Goal
 Project Coruscant aims to introduce newcomers to the many different english accents around the world. Along with the accents we deemed the most interesting to add, we've added facts about each region or country available on the platform. The website is a prototype. It can't be found on the Internet. You can freely use our code though. To access the website, simply download the repository and double click on index.html, it'll launch on your favorite browser.
 ## Getting Started
