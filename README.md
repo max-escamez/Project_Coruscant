@@ -12,7 +12,7 @@ You can interact with it to either :
 
 After clicking one of the blue buttons you will be able to see all the information about the
 region you chose. <br />
-![picture alt](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/accent.png) <br />
+![picture alt](images/accent.png) <br />
 Here's all the things you can access :
   * First of all, the accent. To make it easier for you to compare all of them, we retrieved recordings of the same sentence for every accents. Just click the audio player on the far left to listen to it. You can also adjust the volume to your convenience and pause the recording when you feel like it.
   * On the left along the player, you will find the name and flag of the region and also its nickname and motto. A motto is a phrase meant to formally summarize the general motivation or intention of the region. It's basically the region's slogan !
@@ -21,10 +21,10 @@ Here's all the things you can access :
   * We've also added videos that showcase the celebrity's accent. You can access that video by clicking on the picture. <br />
 
 When you're all done learning about these accents, you can test your skills with the Accents Quizzes. <br />
-![picture alt](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/accentquizz.png) <br />
+![picture alt](images/accentquizz.png) <br />
 Their level are ranging from easy to difficult so that you can progress with ease.
 You can also try the trivia quiz which is a little more general. <br />
-![picture alt](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/triviaquizz.png) <br />
+![picture alt](images/triviaquizz.png) <br />
 <br />
 You're all set ! We hope you try out the website for yourself !
 
