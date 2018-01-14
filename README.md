@@ -14,18 +14,12 @@ After clicking one of the blue buttons you will be able to see all the informati
 region you chose. <br />
 ![Accent tab example](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/accent.png) <br />
 Here's all the things you can access :
-* First of all, the accent. To make it easier for you to compare all of them, we retrieved
-recordings of the same sentence for every accents. Just click the audio player on the far
-left to listen to it. You can also adjust the volume to your convenience and pause the
-recording when you feel like it.
-* On the left along the player, you will find the name and flag of the region and also
-its nickname and motto. A motto is a phrase meant to formally summarize the general
-motivation or intention of the region. It's basically the region's slogan !
-* In the middle, you will find three to four fun facts about the region.
-* On the right, you will find two celebrities that come from the region because we feel that
-sometimes it's easier to put a familiar face on a place.
-* We also added videos that showcase the celebrity's accent. You can access that video by
-clicking on the picture.
+  * First of all, the accent. To make it easier for you to compare all of them, we retrieved recordings of the same sentence for every accents. Just click the audio player on the far left to listen to it. You can also adjust the volume to your convenience and pause the recording when you feel like it.
+  * On the left along the player, you will find the name and flag of the region and also its nickname and motto. A motto is a phrase meant to formally summarize the general motivation or intention of the region. It's basically the region's slogan !
+  * In the middle, you will find three to four fun facts about the region.
+  * On the right, you will find two celebrities that come from the region because we feel that sometimes it's easier to put a familiar face on a place.
+  * We also added videos that showcase the celebrity's accent. You can access that video by clicking on the picture. <br />
+
 When you're all done learning about these accents, you can test your skills with the Accents Quizzes. <br />
 ![Accent quizz](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/accentquizz.png) <br />
 Their level are ranging from easy to difficult so that you can progress with ease.
