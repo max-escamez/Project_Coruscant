@@ -13,7 +13,7 @@ You can interact with it to either :
 After clicking one of the blue buttons you will be able to see all the information about the
 region you chose. <br />
 ![Accent tab example](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/accent.png)
-![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional") <br />
+![picture alt](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/accent.png "Title is optional") <br />
 Here's all the things you can access :
   * First of all, the accent. To make it easier for you to compare all of them, we retrieved recordings of the same sentence for every accents. Just click the audio player on the far left to listen to it. You can also adjust the volume to your convenience and pause the recording when you feel like it.
   * On the left along the player, you will find the name and flag of the region and also its nickname and motto. A motto is a phrase meant to formally summarize the general motivation or intention of the region. It's basically the region's slogan !
