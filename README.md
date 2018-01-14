@@ -4,11 +4,12 @@ Project Coruscant aims to introduce newcomers to the many different english acce
 ## Getting Started
 Here, you'll learn how to use our website. Don't worry, we made it pretty self-explanatory !
 First of, when logging in you'll see a world map. <br />
-![World map](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/worldmap.png) <br />
+![picture alt](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/worldmap.png) <br />
 You can interact with it to either :
-* Access accents and information about regions by clicking the blue buttons.
-* Access the different quizzes the Project has to offer by clicking the affiliated buttons.
-* Get back to the world map by clicking the map button. <br />
+  * Access accents and information about regions by clicking the blue buttons.
+  * Access the different quizzes the Project has to offer by clicking the affiliated buttons.
+  * Get back to the world map by clicking the map button. <br />
+
 After clicking one of the blue buttons you will be able to see all the information about the
 region you chose. <br />
 ![Accent tab example](https://github.com/maxime-escamez/Project_Coruscant/tree/master/images/accent.png) <br />
